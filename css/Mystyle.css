@@ -1,0 +1,86 @@
+
+/* Base Styles */
+.s-header__menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.s-header__menu-links li {
+    position: relative;
+}
+
+.s-header__menu-links a {
+    text-decoration: none;
+    
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Places the dropdown below the parent menu item */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 200px;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown li a:hover {
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+/* Show Dropdown on Hover */
+.s-header__menu-links li:hover .dropdown {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .s-header__menu-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .s-header__menu-links li:hover .dropdown {
+        display: none; /* Disable hover for mobile, handled by JS */
+    }
+
+    .dropdown li {
+        text-align: left;
+    }
+}
+
+#text-bold{
+font-weight: bolder;
+}
+
+
