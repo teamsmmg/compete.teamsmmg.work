@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon FAQ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #000;
+    }
+    .section-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .faq-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .faq-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    .faq-card .card-body {
+        background-color: #ffffff;
+    }
+    .faq-card .card-title {
+        color: #007bff;
+        font-weight: bold;
+    }
+    .faq-card .card-text {
+        color: #6c757d;
+    }
+    .custom-shape-divider-top-1623679568 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .custom-shape-divider-top-1623679568 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
+    .custom-shape-divider-top-1623679568 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .section-title {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        position: relative;
+    }
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #3498db;
+        margin: 10px auto;
+    }
+    .faq-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    }
+    .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .faq-card h5 {
+        color: #3498db;
+        font-weight: bold;
+    }
+    .faq-card p {
+        color: #34495e;
+    }
+    @media (max-width: 768px) {
+        .faq-card {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .eligibility-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin-top: 40px;
+        max-width: 900px;
+        width: 100%;
+    }
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+    }
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #3498db;
+        margin: 10px auto 0;
+    }
+    .faq-card {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .faq-card h5 {
+        color: #3498db;
+        font-weight: 600;
+    }
+    .faq-card p {
+        color: #7f8c8d;
+    }
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .faq-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        transition: all 0.3s ease;
+    }
+    .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+    }
+    .faq-card h5 {
+        color: #e67e22;
+        font-weight: 600;
+    }
+    .btn-orange {
+        background-color: #e67e22;
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    .btn-orange:hover {
+        background-color: #d35400;
+        transform: scale(1.05);
+    }
+    .floating-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #e67e22;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .floating-icon:hover {
+        background-color: #d35400;
+        transform: scale(1.1);
+    }
+    
+    .section-title {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .faq-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .faq-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .faq-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    .faq-card h5 {
+        color: #343a40;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    .faq-card p {
+        color: #6c757d;
+    }
+    .custom-shape-divider-top-1682426796 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+    }
+    .custom-shape-divider-top-1682426796 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
+    .custom-shape-divider-top-1682426796 .shape-fill {
+        fill: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Hackathon FAQ</h1>
+
+    <div class="custom-shape-divider-top-1682426796">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="container my-5">
+        <section id="general-info">
+            <h2 class="section-title" data-aos="fade-down">Hackathon FAQ</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x150?tech" alt="General Info Image" class="faq-image">
+                        <div class="card-body">
+                            <h5>When and where will the hackathon take place?</h5>
+                            <p>The hackathon will take place on February 25-26, 2025, at Innovation Hub, Silicon Valley.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x150?time" alt="Event Duration" class="faq-image">
+                        <div class="card-body">
+                            <h5>What is the duration of the event?</h5>
+                            <p>The event will last 48 hours, starting at 10:00 AM on February 25th and concluding at 10:00 AM on February 27th.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x150?innovation" alt="Theme" class="faq-image">
+                        <div class="card-body">
+                            <h5>What is the theme of the hackathon?</h5>
+                            <p>The theme is "Tech for Good," focusing on innovative solutions to global challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x150?calendar" alt="Registration Deadline" class="faq-image">
+                        <div class="card-body">
+                            <h5>What is the last date for registration?</h5>
+                            <p>The last date to register is February 20, 2025.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="container mt-5">
+        <section id="registration" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="section-title">Registration & Participation</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card faq-card p-4">
+                        <h5>How can I register?</h5>
+                        <p>Visit our website and complete the registration form. An email confirmation will follow.</p>
+                        <button class="btn btn-orange mt-3" onclick="showModal('registration')">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card faq-card p-4">
+                        <h5>Individual or Team?</h5>
+                        <p>Both individual participants and teams are welcome. Teams can have up to 5 members.</p>
+                        <button class="btn btn-orange mt-3" onclick="showModal('team')">Team Info</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card faq-card p-4">
+                        <h5>Registration Fee</h5>
+                        <p>The registration fee is $25 per participant. Group discounts are available.</p>
+                        <button class="btn btn-orange mt-3" onclick="showModal('fee')">Fee Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-icon" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container eligibility-container">
+        <!-- Eligibility Section -->
+        <section id="eligibility" class="mt-5" data-aos="fade-up">
+            <h2 class="section-title">Hackathon Eligibility</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card faq-card p-4">
+                        <h5>Who can participate?</h5>
+                        <p>Students, professionals, and entrepreneurs are all welcome to join our exciting hackathon!</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card faq-card p-4">
+                        <h5>International participants?</h5>
+                        <p>We embrace diversity and welcome participants from all around the globe.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+                    <div class="card faq-card p-4">
+                        <h5>Age restrictions?</h5>
+                        <p>Participants must be at least 18 years old or have parental consent to join the event.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="card faq-card p-4">
+                        <h5>Team size?</h5>
+                        <p>Form teams of 2-5 members or participate solo if you prefer to work independently.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="container">
+        <!-- Rules & Guidelines Section -->
+        <section id="rules" class="my-5">
+            <h2 class="section-title" data-aos="fade-down">Rules & Guidelines</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card faq-card p-4">
+                        <h5 class="mb-3">What tools and technologies are allowed?</h5>
+                        <p class="mb-0">You can use any open-source or licensed tools as long as they comply with the rules. We encourage creativity and innovation in your tech stack!</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card faq-card p-4">
+                        <h5 class="mb-3">Can we submit existing projects?</h5>
+                        <p class="mb-0">No, all submissions must be new and developed during the hackathon. This ensures a fair competition and encourages fresh ideas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Submission Process Section -->
+    <section id="submission" class="mt-5" data-aos="fade-down">
+      <h2 class="section-title">Submission Process</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card faq-card p-3">
+            <h5>What is the deadline for project submission?</h5>
+            <p>All projects must be submitted by 9:00 AM on February 27, 2025.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card faq-card p-3">
+            <h5>What is the process for submission?</h5>
+            <p>Submit your project via the provided online portal link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Hackathon FAQ</h1>
+
+   
+
+   
+
+    <div class="custom-shape-divider-top-1623679568">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="container py-5 mt-5">
+        <!-- Section: Event Day Information -->
+        <section id="event-day-info" class="faq-container">
+            <h2 class="section-title" data-aos="fade-down">Event Day Information</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x200?conference" alt="Timings" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Timings</h5>
+                            <p class="card-text">The event kicks off at 10 AM on March 1, 2025, and concludes at 6 PM on March 2, 2025. Get ready for an exciting 32-hour journey of innovation!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card faq-card h-100">
+                        <img src="https://source.unsplash.com/random/500x200?venue" alt="Venue" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Venue Details</h5>
+                            <p class="card-text">Join us at the cutting-edge Tech Arena, located in the heart of Downtown San Francisco, CA. Experience innovation in a state-of-the-art facility!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card faq-card">
+                        <img src="https://source.unsplash.com/random/500x200?technology" alt="Virtual Details" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Virtual Participation</h5>
+                            <p class="card-text">Can't make it in person? No worries! Our virtual hackathon will be hosted on Zoom for presentations and Discord for team collaboration. Access links will be provided upon registration. Get ready to code from anywhere in the world!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    once: true;
+    offset: 100;
+  </script>
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+
+        function showModal(type) {
+            const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+
+            switch(type) {
+                case 'registration':
+                    title.textContent = 'Registration Process';
+                    body.innerHTML = `
+                        <ol>
+                            <li>Fill out the online registration form</li>
+                            <li>Pay the registration fee</li>
+                            <li>Receive a confirmation email</li>
+                            <li>Join our Discord community</li>
+                        </ol>
+                    `;
+                    break;
+                case 'team':
+                    title.textContent = 'Team Information';
+                    body.innerHTML = `
+                        <ul>
+                            <li>Individual participants are welcome</li>
+                            <li>Teams can have up to 5 members</li>
+                            <li>Mixed skill teams are encouraged</li>
+                            <li>We offer a team matching service</li>
+                        </ul>
+                    `;
+                    break;
+                case 'fee':
+                    title.textContent = 'Fee Details';
+                    body.innerHTML = `
+                        <p>Registration fee: $25 per participant</p>
+                        <p>Group discounts:</p>
+                        <ul>
+                            <li>3-4 members: 10% off</li>
+                            <li>5 members: 15% off</li>
+                        </ul>
+                        <p>Fee includes: Participation, swag bag, meals during the event</p>
+                    `;
+                    break;
+            }
+
+            modal.show();
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var floatingIcon = document.querySelector('.floating-icon');
+            
+            if (scrollTop > 300) {
+                floatingIcon.style.opacity = '1';
+                floatingIcon.style.visibility = 'visible';
+            } else {
+                floatingIcon.style.opacity = '0';
+                floatingIcon.style.visibility = 'hidden';
+            }
+        });
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
+</body>
+
+</html>
