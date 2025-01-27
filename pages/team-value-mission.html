@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Values & Missions | Hackathon Squad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+    
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      background-color: orange;
+      color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .hero-section {
+  position: relative;
+  height: 60vh;
+  background-image: url("https://source.unsplash.com/random/1920x1080?technology");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-custom {
+  background-color: #ff6b35;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #ff8c61;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0;
+  }
+}
+
+
+    .mission-section {
+  background: linear-gradient(135deg, #79a7eb 0%, #8da4c9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mission-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mission-content {
+  background-color: rgba(163, 216, 225, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+.btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3a7bc8;
+  border-color: #3a7bc8;
+  transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+  color: #4a90e2;
+  border-color: #4a90e2;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #4a90e2;
+  color: white;
+  transform: translateY(-2px);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+
+    .core-values {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+
+.value-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .icon-box {
+  transform: scale(1.1);
+}
+
+.icon-box i {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.value-card h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #7f8c8d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.value-card .brief {
+  margin-bottom: 0;
+}
+
+.value-card .details {
+  display: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .value-card {
+    margin-bottom: 30px;
+  }
+}
+
+    .approach-section {
+  background-color: #5996d2;
+  position: relative;
+  overflow: hidden;
+}
+
+.approach-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.approach-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 193, 7, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.approach-card {
+  background-color: #50c9e7;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.approach-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.approach-card h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.approach-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .approach-card {
+    margin-bottom: 30px;
+  }
+}
+
+    .achievements-section {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.achievements-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.stats-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+
+.stats-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stats-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.stats-box h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stats-box p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .achievements-section h2 {
+    font-size: 2rem;
+  }
+
+  .stats-box h3 {
+    font-size: 2.5rem;
+  }
+
+  .stats-box p {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center text-center text-white">
+        <div id="particles-js"></div>
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="display-3 fw-bold mb-4">What Drives Us</h1>
+            <p class="lead mb-5">Our mission is to innovate, inspire, and create impactful solutions through teamwork and creativity.</p>
+            <button class="btn btn-custom btn-lg" data-aos="zoom-in" data-aos-delay="300">Learn About Our Journey</button>
+        </div>
+    </section>
+
+
+  <!-- Mission Statement -->
+  <section class="mission-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-5" data-aos="fade-down">Our Mission</h2>
+                <div class="mission-content" data-aos="zoom-in" data-aos-delay="300">
+                    <p class="text-center mb-4">
+                        To solve real-world problems by building scalable and impactful solutions, fostering collaboration, and learning through challenges.
+                    </p>
+                    <div class="text-center mb-4">
+                        <img src="https://random.imagecdn.app/500/150" alt="Mission Visual" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-primary me-2" id="learnMoreBtn">Learn More</button>
+                        <button class="btn btn-outline-secondary" id="joinUsBtn">Join Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Core Values -->
+<section class="py-5 core-values">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-down">What We Stand For</h2>
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="value-card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                    <div class="icon-box">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h5>Innovation</h5>
+                    <p class="brief">We think differently.</p>
+                    <p class="details">We solve challenges creatively, pushing boundaries to find unique solutions.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="value-card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                    <div class="icon-box">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h5>Collaboration</h5>
+                    <p class="brief">We work together.</p>
+                    <p class="details">Our diverse team brings varied perspectives to breathe life into innovative ideas.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="value-card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                    <div class="icon-box">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5>Integrity</h5>
+                    <p class="brief">We value honesty.</p>
+                    <p class="details">Transparency and ethical practices are at the core of everything we do.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-card" onmouseover="showDetails(this)" onmouseout="hideDetails(this)">
+                    <div class="icon-box">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h5>Impact</h5>
+                    <p class="brief">We make a difference.</p>
+                    <p class="details">Every project we undertake is designed to create positive change in the world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- How We Work -->
+  <section class="approach-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-down">Our Innovative Approach</h2>
+        <p class="text-center mb-5" data-aos="fade-up">We believe in a structured and collaborative approach to achieve excellence:</p>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h5>Brainstorming</h5>
+                    <p>Collaborative sessions to generate creative ideas.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h5>Prototyping</h5>
+                    <p>Building, testing, and iterating our designs.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200">
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h5>Execution</h5>
+                    <p>Turning ideas into impactful, scalable solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Achievements and Impact -->
+   <section class="achievements-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-down">Making a Difference</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Hackathons Completed</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="counter" data-target="3">0</h3>
+                    <p>Innovation Awards Won</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="400">
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="counter" data-target="5000">0</h3>
+                    <p>Users Impacted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </main>
+
+
+
+
+  <!-- Hero Section -->
+<script>
+// Initialize AOS
+AOS.init()
+
+// Particle.js configuration
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: "#ffffff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5, random: true },
+    size: { value: 3, random: true },
+    move: { enable: true, speed: 1, direction: "none", random: true, out_mode: "out" },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" },
+    },
+    modes: {
+      repulse: { distance: 100, duration: 0.4 },
+      push: { particles_nb: 4 },
+    },
+  },
+})
+
+
+</script>
+
+
+<!-- Core Values -->
+<script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Function to show details on hover
+function showDetails(element) {
+  const brief = element.querySelector(".brief")
+  const details = element.querySelector(".details")
+
+  brief.style.display = "none"
+  details.style.display = "block"
+}
+
+// Function to hide details when not hovering
+function hideDetails(element) {
+  const brief = element.querySelector(".brief")
+  const details = element.querySelector(".details")
+
+  brief.style.display = "block"
+  details.style.display = "none"
+}
+
+// Change icon box colors randomly on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const iconBoxes = document.querySelectorAll(".icon-box")
+  const colors = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c"]
+
+  iconBoxes.forEach((box) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)]
+    box.style.backgroundColor = randomColor
+  })
+})
+</script>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Add hover effect to the image
+  const missionImage = document.querySelector(".mission-content img")
+  missionImage.addEventListener("mouseover", function () {
+    this.style.filter = "brightness(1.1)"
+  })
+  missionImage.addEventListener("mouseout", function () {
+    this.style.filter = "brightness(1)"
+  })
+
+  // Add click events to buttons
+  document.getElementById("learnMoreBtn").addEventListener("click", () => {
+    alert("Learn more about our mission and values!")
+  })
+
+  document.getElementById("joinUsBtn").addEventListener("click", () => {
+    alert("Join us in making a difference!")
+  })
+
+  // Add a scroll-triggered animation
+  window.addEventListener("scroll", () => {
+    const missionContent = document.querySelector(".mission-content")
+    const missionContentPosition = missionContent.getBoundingClientRect().top
+    const screenPosition = window.innerHeight / 1.3
+
+    if (missionContentPosition < screenPosition) {
+      missionContent.style.transform = "translateY(0)"
+      missionContent.style.opacity = "1"
+    }
+  })
+})
+</script>
+
+
+<!-- How We Work -->
+<script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Add hover effect to approach cards
+document.querySelectorAll(".approach-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.backgroundColor = "#5996d2"
+  })
+  card.addEventListener("mouseleave", () => {
+    card.style.backgroundColor = " #50c9e7"
+  })
+})
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault()
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    })
+  })
+})
+</script>
+
+
+
+<!-- Achievements and Impact -->
+<script>
+// Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+});
+
+// Counter animation (triggered when the section is in view)
+const counters = document.querySelectorAll(".counter");
+const speed = 200;
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = +counter.getAttribute("data-target");
+      let count = 0; // Start count at 0
+      const inc = target / speed;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += inc;
+          counter.innerText = Math.ceil(count);
+          setTimeout(updateCount, 1); // Adjust speed by changing timeout
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+      counterObserver.unobserve(counter);
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach((counter) => {
+  counterObserver.observe(counter);
+});
+
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
