@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Journey</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(236, 227, 227);
+      color: black;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .main {
+      padding: 2rem 1rem;
+    }
+
+    .header-section {
+            background-image: url('https://wallpapers.com/images/featured/journey-background-c7dbq5thi1p3c7ad.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.707);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .btn-explore {
+            transition: all 0.3s ease;
+        }
+        .btn-explore:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .intro-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+#team-name {
+  border-right: 2px solid #007bff;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007bff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+.team-blaze-story {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-header {
+  position: relative;
+  display: inline-block;
+  color: #2c3e50;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #e74c3c;
+}
+
+.image-collage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.collage-img {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.collage-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.img-2 {
+  top: 50px;
+  left: 100px;
+  z-index: 2;
+}
+.img-3 {
+  top: 150px;
+  left: 50px;
+  z-index: 3;
+}
+.img-4 {
+  top: 200px;
+  left: 150px;
+  z-index: 4;
+}
+
+.btn-primary {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.key-milestones {
+  background-color: #f8f9fa;
+  height: auto;
+}
+
+.section-header {
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #e9ecef;
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  margin-left: -10px;
+  z-index: 1;
+}
+
+.timeline-panel {
+  width: calc(50% - 30px);
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.timeline-item:nth-child(even) .timeline-panel {
+  float: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-panel::before {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-panel::before {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-left: 0 solid #ccc;
+  border-right: 15px solid #ccc;
+  border-bottom: 15px solid transparent;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.timeline-body > p {
+  margin-bottom: 0;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .timeline::before {
+    left: 40px;
+  }
+  .timeline-badge {
+    left: 40px;
+  }
+  .timeline-panel {
+    width: calc(100% - 90px);
+    float: right;
+  }
+  .timeline-item:nth-child(odd) .timeline-panel::before {
+    left: -15px;
+    right: auto;
+    border-left: 0 solid #ccc;
+    border-right: 15px solid #ccc;
+  }
+}
+
+.memorable-moments {
+    margin-top: 100px;
+  background-color: #f8f9fa;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.moment-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-card {
+  background-color: #007bff;
+  color: white;
+}
+
+.quote-card .card-text {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#shareButton {
+  transition: transform 0.3s ease;
+}
+
+#shareButton:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.challenges-section {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.section-header {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.list-group-item {
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(10px);
+  background-color: #f1f3f5;
+}
+
+.badge {
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover .badge {
+  transform: scale(1.2);
+}
+
+.conclusion {
+  font-style: italic;
+  color: #6c757d;
+}
+
+#learnMoreBtn {
+  transition: all 0.3s ease;
+}
+
+#learnMoreBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.future-goals {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 15px auto 0;
+}
+
+.goal-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.goal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.goal-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.goal-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.goal-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .goal-card {
+    margin-bottom: 1rem;
+  }
+}
+.section-header {
+            position: relative;
+            display: inline-block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00ff88);
+        }
+        .team-member {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #007bff;
+        }
+        .team-member-info {
+            padding: 1.5rem;
+        }
+        .team-member h5 {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .team-member p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+
+        .crazy-work-highlights {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+}
+
+.section-header {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card .card-body {
+  padding: 30px;
+}
+
+.highlight-card .card-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.highlight-card .card-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .crazy-work-highlights {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    font-size: 2rem;
+  }
+
+  .highlight-card .card-body {
+    padding: 20px;
+  }
+}
+.fun-failures {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-header {
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.unicorn-card {
+  background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.glitch-card {
+  background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.card-title {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+}
+
+.unicorn-icon {
+  font-size: 1.5em;
+}
+
+.glitch-animation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.glitch-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: "Maybe!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  4.166666667% {
+    clip: rect(91px, 9999px, 43px, 0);
+  }
+  8.333333333% {
+    clip: rect(15px, 9999px, 13px, 0);
+  }
+  12.5% {
+    clip: rect(75px, 9999px, 57px, 0);
+  }
+  16.66666667% {
+    clip: rect(8px, 9999px, 4px, 0);
+  }
+  20.83333333% {
+    clip: rect(69px, 9999px, 70px, 0);
+  }
+  25% {
+    clip: rect(75px, 9999px, 53px, 0);
+  }
+  29.16666667% {
+    clip: rect(40px, 9999px, 78px, 0);
+  }
+  33.33333333% {
+    clip: rect(56px, 9999px, 20px, 0);
+  }
+  37.5% {
+    clip: rect(79px, 9999px, 71px, 0);
+  }
+  41.66666667% {
+    clip: rect(22px, 9999px, 39px, 0);
+  }
+  45.83333333% {
+    clip: rect(70px, 9999px, 89px, 0);
+  }
+  50% {
+    clip: rect(40px, 9999px, 88px, 0);
+  }
+  54.16666667% {
+    clip: rect(99px, 9999px, 61px, 0);
+  }
+  58.33333333% {
+    clip: rect(24px, 9999px, 26px, 0);
+  }
+  62.5% {
+    clip: rect(35px, 9999px, 3px, 0);
+  }
+  66.66666667% {
+    clip: rect(54px, 9999px, 7px, 0);
+  }
+  70.83333333% {
+    clip: rect(5px, 9999px, 41px, 0);
+  }
+  75% {
+    clip: rect(82px, 9999px, 40px, 0);
+  }
+  79.16666667% {
+    clip: rect(51px, 9999px, 84px, 0);
+  }
+  83.33333333% {
+    clip: rect(89px, 9999px, 99px, 0);
+  }
+  87.5% {
+    clip: rect(32px, 9999px, 68px, 0);
+  }
+  91.66666667% {
+    clip: rect(67px, 9999px, 71px, 0);
+  }
+  95.83333333% {
+    clip: rect(84px, 9999px, 79px, 0);
+  }
+  100% {
+    clip: rect(89px, 9999px, 9px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+  100% {
+    clip: rect(93px, 9999px, 56px, 0);
+  }
+}
+.testimonials-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 80px 0;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  margin: 20px auto 0;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  position: relative;
+  padding-left: 25px;
+}
+
+.testimonial-content p::before {
+  content: '"';
+  font-size: 3rem;
+  color: #007bff;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 4px solid #007bff;
+}
+
+.author-info h5 {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.author-info p {
+  margin: 0;
+  color: #007bff;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-content {
+    font-size: 1rem;
+  }
+
+  .author-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+
+
+
+
+.gallery-section {
+  background-color: #f8f9fa;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-info {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.gallery-info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-info p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+
+.team-culture {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.meme-gallery img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.meme-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.survival-hacks .list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 0.75rem 0;
+}
+
+.survival-hacks .badge {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+   
+  </style>
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="overlay"></div>
+        <div class="content container">
+            <h1 class="display-2 fw-bold mb-4" data-aos="fade-down" data-aos-delay="100">Our Journey</h1>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">Explore how we built, conquered, and innovated to shape our legacy.</p>
+            <a href="#" class="btn btn-lg btn-primary btn-explore" data-aos="zoom-in" data-aos-delay="300">Start Exploring</a>
+        </div>
+    </header>
+  <main class="main">
+    <!-- Content sections go here -->
+    <!-- Introduction Section -->
+    <section class="intro-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-4 fw-bold mb-4">We are<span id="team-name" class="text-primary"></span></h1>
+                    <p class="lead mb-4">Innovators, problem solvers, and creators of groundbreaking solutions.</p>
+                    <p class="mb-4">We started participating in hackathons with the vision to create impactful projects and inspire a new wave of innovation in the tech industry.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/600x400" alt="Team Blaze" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="team-blaze-story py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="section-header display-4 mb-4">The Beginning</h2>
+                    <p class="lead">Team Blaze was formed in 2022 when four college friends, Alex, Mia, Sam, and Riya, decided to collaborate on their first hackathon. With zero expectations but lots of passion, they worked day and night, building a basic app that surprisingly impressed the judges.</p>
+                    <button class="btn btn-primary mt-3" id="readMoreBtn">Read More</button>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="image-collage">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Team member 1" class="collage-img img-1">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Team member 2" class="collage-img img-2">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Team member 3" class="collage-img img-3">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Team member 4" class="collage-img img-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+      <!-- Key Milestones -->
+      <section class="key-milestones py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5" data-aos="fade-down">Key Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-badge bg-primary"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">2022: First Hackathon</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Built an app for managing college events. Won "Most Creative Solution."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-badge bg-success"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">2023: Major Breakthrough</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Created a healthcare chatbot that bagged the first prize at TechFest 2023.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-badge bg-info"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">2024: Future Goals</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Aiming to launch a startup focused on AI-driven educational tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+  <!-- memorabale-moments -->
+    <section class="memorable-moments py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5" data-aos="fade-down">Memorable Moments</h2>
+               <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="card moment-card">
+                        <div class="card-body">
+                            <p class="card-text">"One of our most memorable moments was when our buggy code worked perfectly during the final presentation. It was a mixture of luck and excitement!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="card moment-card quote-card">
+                        <div class="card-body">
+                            <p class="card-text">"Hackathons bring out the craziest and best in us."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" id="shareButton" data-aos="zoom-in">Share Your Moment</button>
+            </div>
+        </div>
+    </section>
+  
+      <!-- Gallery -->
+    <section class="gallery-section py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-header text-center mb-5">Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://random.imagecdn.app/500/300" alt="Hackathon 1" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <h3>Hackathon 1</h3>
+                            <p>Innovative solutions in action</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://random.imagecdn.app/500/300" alt="Hackathon 2" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <h3>Hackathon 2</h3>
+                            <p>Collaboration and creativity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="https://random.imagecdn.app/500/300" alt="Hackathon 3" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <h3>Hackathon 3</h3>
+                            <p>Pushing boundaries in tech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- Challenges Faced and Lessons Learned -->
+      <section class="challenges-section py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5" data-aos="fade-down">Challenges Faced and Lessons Learned</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <p class="lead">Our journey wasn't all smooth sailing. From technical bugs to time management chaos, we've faced it all. But each challenge taught us something new:</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Technical Hurdles:</strong> Debugging in the final hour.</span>
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Team Coordination:</strong> Aligning schedules and skills.</span>
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Time Crunch:</strong> Delivering under extreme deadlines.</span>
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <p class="conclusion">These experiences helped us grow stronger and more cohesive as a team.</p>
+                    <button class="btn btn-primary mt-3" id="learnMoreBtn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+        <section class="future-goals py-5">
+            <div class="container">
+                <h2 style="color: white;" class="section-header text-center mb-5" data-aos="fade-down">Future Goals</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="100">
+                        <div class="goal-card">
+                            <div class="goal-icon">🏆</div>
+                            <h3>Compete Globally</h3>
+                            <p>Participate in at least 5 international hackathons next year.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="goal-card">
+                            <div class="goal-icon">🌍</div>
+                            <h3>Sustainable AI</h3>
+                            <p>Develop an AI-driven project for significant environmental impact.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+                        <div class="goal-card">
+                            <div class="goal-icon">👥</div>
+                            <h3>Community Building</h3>
+                            <p>Mentor aspiring hackers and foster an innovation community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    <!-- Meet the Team -->
+    <section class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-header text-center mb-5">Meet Our Awesome Team</h2>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
+                    <div class="team-member">
+                        <img src="https://random.imagecdn.app/500/500" alt="Alex" class="img-fluid">
+                        <div class="team-member-info">
+                            <h5>Alex</h5>
+                            <p>Frontend Developer</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="team-member">
+                        <img src="https://random.imagecdn.app/500/500" alt="Mia" class="img-fluid">
+                        <div class="team-member-info">
+                            <h5>Mia</h5>
+                            <p>Backend Specialist</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
+                    <div class="team-member">
+                        <img src="https://random.imagecdn.app/500/500" alt="Sam" class="img-fluid">
+                        <div class="team-member-info">
+                            <h5>Sam</h5>
+                            <p>Designer</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="400">
+                    <div class="team-member">
+                        <img src="https://random.imagecdn.app/500/500" alt="Riya" class="img-fluid">
+                        <div class="team-member-info">
+                            <h5>Riya</h5>
+                            <p>Strategist</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Crazy Work Highlights -->
+    <section class="crazy-work-highlights py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5" data-aos="fade-down">Crazy Work Highlights</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card highlight-card">
+                        <div class="card-body">
+                            <h5 class="card-title">The Spark of Madness</h5>
+                            <p class="card-text">Once, we completed a project in 36 hours straight without sleep!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card highlight-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Oops! But It Worked</h5>
+                            <p class="card-text">A buggy animation turned into a feature that won us accolades.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card highlight-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Midnight Brainstorms</h5>
+                            <p class="card-text">Our best ideas often come at 2 AM. Sleep is overrated!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Fun and Failures -->
+    <section class="fun-failures py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-header text-center mb-5">Fun and Failures</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="card unicorn-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Unicorn Ideas That Didn't Fly</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="unicorn-icon me-3">🦄</span>
+                                    An app that predicts your mood based on your typing speed.
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <span class="unicorn-icon me-3">🦄</span>
+                                    An AI coffee mug that adjusts temperature automatically.
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary mt-3" id="addIdeaBtn">Add Your Idea</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="card glitch-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Glitch & Glam</h5>
+                            <p class="card-text">Our funniest glitch? A chatbot that answered every question with "Maybe!" Judges loved it for its honesty.</p>
+                            <div class="glitch-animation">
+                                <span class="glitch-text">Maybe!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+  
+  <!-- Team Culture and Fun -->
+  <section class="team-culture py-5">
+    <div class="container">
+        <h2 class="section-header text-center mb-5" data-aos="fade-down">Team Culture and Fun</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">The Meme Museum</h3>
+                        <p class="card-text">Our team thrives on humor. Here's a collection of memes and inside jokes that kept us sane during sleepless hackathons.</p>
+                        <div class="meme-gallery">
+                            <img src="https://random.imagecdn.app/400/200" alt="Meme 1" class="img-fluid rounded mb-3">
+                            <img src="https://random.imagecdn.app/400/200" alt="Meme 2" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">24-Hour Survival Hacks</h3>
+                        <ul class="survival-hacks list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <span class="badge bg-primary rounded-pill me-3">1</span>
+                                <strong>Sleep in Shifts:</strong> Everyone takes 20-minute naps in rotation.
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <span class="badge bg-primary rounded-pill me-3">2</span>
+                                <strong>Energy Boost:</strong> Stockpile caffeine and bananas.
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <span class="badge bg-primary rounded-pill me-3">3</span>
+                                <strong>Keep it Light:</strong> Play your team's favorite playlist to stay motivated.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+   
+        <!-- Gallery/Multimedia Section -->
+        <section class="gallery-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-header text-center mb-5" data-aos="fade-up">Gallery and Highlights</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="gallery-item">
+                            <img src="https://random.imagecdn.app/800/600" alt="Hackathon Moment 1" class="img-fluid rounded shadow">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Hackathon Moment 1</h4>
+                                    <p>Exciting collaboration in action</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="gallery-item">
+                            <img src="https://random.imagecdn.app/800/600" alt="Hackathon Moment 2" class="img-fluid rounded shadow">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Hackathon Moment 2</h4>
+                                    <p>Innovative ideas taking shape</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="gallery-item">
+                            <img src="https://random.imagecdn.app/800/600" alt="Hackathon Moment 3" class="img-fluid rounded shadow">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Hackathon Moment 3</h4>
+                                    <p>Celebrating successful projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Lightbox Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="/placeholder.svg" class="img-fluid" id="modalImage" alt="Enlarged Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+       <!-- Testimonials or Feedback -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5" data-aos="fade-down">What People Say About Us</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Their innovative approach and teamwork were truly inspiring. The solutions they delivered exceeded our expectations."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Judge" class="author-image">
+                            <div class="author-info">
+                                <h5>Emily Johnson</h5>
+                                <p>Judge, TechSprint 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I learned so much from this team's energy and problem-solving skills. Their presentation was exceptional and truly stood out."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Mentor" class="author-image">
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <p>Mentor, Hackathon X</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+    
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script>
+      // Initialize AOS
+      AOS.init({
+          duration: 1000,
+          once: true
+      });
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Typing effect for team name
+    const teamName = "Team MMG"
+    const teamNameElement = document.getElementById("team-name")
+    let i = 0
+  
+    function typeWriter() {
+      if (i < teamName.length) {
+        teamNameElement.innerHTML += teamName.charAt(i)
+        i++
+        setTimeout(typeWriter, 150)
+      }
+    }
+  
+    typeWriter()
+  })</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Add hover effect to testimonial cards
+    const testimonialCards = document.querySelectorAll(".testimonial-card")
+    testimonialCards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px)"
+      })
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)"
+      })
+    })
+  })</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Get the read more button
+    const readMoreBtn = document.getElementById("readMoreBtn")
+  
+    // Add click event listener to the button
+    readMoreBtn.addEventListener("click", () => {
+      // Create a modal with Bootstrap
+      const modal = new bootstrap.Modal(document.createElement("div"))
+      modal.element.innerHTML = `
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">The Full Story of Team Blaze</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Team Blaze's journey began in a small dorm room at Tech University. Alex, the coding wizard, Mia, the design guru, Sam, the marketing mastermind, and Riya, the project manager extraordinaire, came together with a shared vision of creating innovative solutions.</p>
+                          <p>Their first hackathon was a rollercoaster of emotions - from moments of doubt to bursts of creativity. They powered through sleepless nights, fueled by coffee and determination. Their app, a simple but effective tool for connecting students with mental health resources, caught the judges' attention.</p>
+                          <p>Winning third place in the hackathon was just the beginning. Inspired by their success, Team Blaze decided to continue working together, taking on freelance projects and participating in more competitions. With each challenge, they grew stronger, learning from their mistakes and celebrating their victories.</p>
+                          <p>Today, Team Blaze stands as a testament to the power of collaboration, passion, and perseverance. They're not just a team; they're a family, bound by their love for technology and their desire to make a difference in the world.</p>
+                      </div>
+                  </div>
+              </div>
+          `
+      modal.show()
+    })
+  
+    // Add hover effect to collage images
+    const collageImages = document.querySelectorAll(".collage-img")
+    collageImages.forEach((img) => {
+      img.addEventListener("mouseover", function () {
+        this.style.zIndex = "5"
+      })
+      img.addEventListener("mouseout", function () {
+        this.style.zIndex = ""
+      })
+    })
+  })
+  
+  </script>
+  <script>// Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+    
+    // Fun interactive element: Change meme images on click
+    document.addEventListener("DOMContentLoaded", () => {
+      const memeImages = document.querySelectorAll(".meme-gallery img")
+      const memeUrls = [
+        "https://random.imagecdn.app/400/200",
+        "https://random.imagecdn.app/401/200",
+        "https://random.imagecdn.app/402/200",
+        "https://random.imagecdn.app/403/200",
+        "https://random.imagecdn.app/404/200",
+      ]
+    
+      memeImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          const randomUrl = memeUrls[Math.floor(Math.random() * memeUrls.length)]
+          img.style.opacity = 0
+          setTimeout(() => {
+            img.src = randomUrl
+            img.style.opacity = 1
+          }, 300)
+        })
+      })
+    
+      // Add a fun hover effect to survival hacks
+      const survivalHacks = document.querySelectorAll(".survival-hacks .list-group-item")
+      survivalHacks.forEach((hack) => {
+        hack.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "#e9ecef"
+          this.style.transform = "scale(1.05)"
+        })
+        hack.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "transparent"
+          this.style.transform = "scale(1)"
+        })
+      })
+    })
+    </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Add hover effect to timeline items
+    const timelineItems = document.querySelectorAll(".timeline-item")
+    timelineItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        item.querySelector(".timeline-panel").style.transform = "scale(1.05)"
+        item.querySelector(".timeline-panel").style.transition = "transform 0.3s ease"
+      })
+      item.addEventListener("mouseleave", () => {
+        item.querySelector(".timeline-panel").style.transform = "scale(1)"
+      })
+    })
+  })</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Add click event to the Share button
+    const shareButton = document.getElementById("shareButton")
+    shareButton.addEventListener("click", () => {
+      const userMoment = prompt("Share your memorable hackathon moment:")
+      if (userMoment) {
+        addNewMoment(userMoment)
+      }
+    })
+  
+    function addNewMoment(moment) {
+      const container = document.querySelector(".row")
+      const newCard = document.createElement("div")
+      newCard.className = "col-md-6 mb-4"
+      newCard.setAttribute("data-aos", "fade-up")
+  
+      newCard.innerHTML = `
+              <div class="card moment-card">
+                  <div class="card-body">
+                      <p class="card-text">"${moment}"</p>
+                  </div>
+              </div>
+          `
+  
+      container.appendChild(newCard)
+      AOS.refresh()
+    }
+  })</script>
+  <script>// Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+    
+    // Simple Lightbox functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const galleryItems = document.querySelectorAll(".gallery-item")
+    
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          const imgSrc = this.querySelector("img").src
+          const lightbox = document.createElement("div")
+          lightbox.innerHTML = `
+                    <div class="lightbox">
+                        <img src="${imgSrc}" alt="Enlarged gallery image">
+                        <span class="close-lightbox">&times;</span>
+                    </div>
+                `
+          document.body.appendChild(lightbox)
+    
+          lightbox.querySelector(".close-lightbox").addEventListener("click", () => {
+            document.body.removeChild(lightbox)
+          })
+        })
+      })
+    })</script>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        // Initialize AOS
+        AOS.init({
+          duration: 1000,
+          once: true,
+        })
+      
+        // Add click event to the Learn More button
+        const learnMoreBtn = document.getElementById("learnMoreBtn")
+        learnMoreBtn.addEventListener("click", () => {
+          alert("Thank you for your interest! We're constantly learning and improving.")
+        })
+      
+        // Add hover effect to list items
+        const listItems = document.querySelectorAll(".list-group-item")
+        listItems.forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            this.querySelector(".badge").style.backgroundColor = "#0056b3"
+          })
+          item.addEventListener("mouseleave", function () {
+            this.querySelector(".badge").style.backgroundColor = ""
+          })
+        })
+      })</script>
+      <script>// Initialize AOS
+        AOS.init({
+          duration: 1000,
+          once: true,
+        })
+        
+        // Add click interaction to goal cards
+        document.querySelectorAll(".goal-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            card.classList.add("clicked")
+            setTimeout(() => {
+              card.classList.remove("clicked")
+            }, 500)
+          })
+        })
+        
+        // Randomly change goal icons every 5 seconds
+        const icons = ["🏆", "🌍", "👥", "🚀", "💡", "🔬", "🌟", "🎯", "🔧"]
+        setInterval(() => {
+          document.querySelectorAll(".goal-icon").forEach((icon) => {
+            icon.textContent = icons[Math.floor(Math.random() * icons.length)]
+          })
+        }, 5000)
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
+        <script>document.addEventListener("DOMContentLoaded", () => {
+            // Initialize AOS
+            AOS.init({
+              duration: 1000,
+              once: true,
+            })
+          
+            // Custom hover effect for cards
+            const cards = document.querySelectorAll(".highlight-card")
+            cards.forEach((card) => {
+              card.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+              })
+              card.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+              })
+            })
+          
+            // Add random tilt effect to cards
+            cards.forEach((card) => {
+              const randomTilt = Math.random() * 5 - 2.5 // Random tilt between -2.5 and 2.5 degrees
+              card.style.transform = `rotate(${randomTilt}deg)`
+            })
+          })</script>
+          <script>document.addEventListener("DOMContentLoaded", () => {
+            // Initialize AOS
+            AOS.init({
+              duration: 1000,
+              once: true,
+            })
+          
+            // Add new idea functionality
+            const addIdeaBtn = document.getElementById("addIdeaBtn")
+            const ideaList = document.querySelector(".unicorn-card .list-group")
+          
+            addIdeaBtn.addEventListener("click", () => {
+              const newIdea = prompt("Enter your unicorn idea:")
+              if (newIdea) {
+                const newItem = document.createElement("li")
+                newItem.className = "list-group-item d-flex align-items-center"
+                newItem.innerHTML = `
+                          <span class="unicorn-icon me-3">🦄</span>
+                          ${newIdea}
+                      `
+                ideaList.appendChild(newItem)
+          
+                // Animate the new item
+                newItem.style.opacity = "0"
+                newItem.style.transform = "translateY(20px)"
+                setTimeout(() => {
+                  newItem.style.transition = "opacity 0.5s, transform 0.5s"
+                  newItem.style.opacity = "1"
+                  newItem.style.transform = "translateY(0)"
+                }, 10)
+              }
+            })
+          
+            // Glitch text animation
+            const glitchText = document.querySelector(".glitch-text")
+            setInterval(() => {
+              glitchText.style.animation = "none"
+              void glitchText.offsetWidth // Trigger reflow
+              glitchText.style.animation = null
+            }, 2000)
+          })</script>
+          <script>document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+              duration: 1000,
+              once: true,
+              mirror: false,
+            })
+          
+            // Add a subtle parallax effect to the testimonial cards
+            window.addEventListener("scroll", () => {
+              const cards = document.querySelectorAll(".testimonial-card")
+              cards.forEach((card, index) => {
+                const scrollY = window.scrollY
+                const offset = scrollY * 0.1 * (index % 2 === 0 ? 1 : -1)
+                card.style.transform = `translateY(${offset}px)`
+              })
+            })
+          })</script>
+          <script>document.addEventListener("DOMContentLoaded", () => {
+            // Initialize AOS
+            AOS.init({
+              duration: 1000,
+              once: true,
+            })
+          
+            // Lightbox functionality
+            const galleryItems = document.querySelectorAll(".gallery-item")
+            const modal = new bootstrap.Modal(document.getElementById("imageModal"))
+            const modalImage = document.getElementById("modalImage")
+          
+            galleryItems.forEach((item) => {
+              item.addEventListener("click", function () {
+                const imgSrc = this.querySelector("img").src
+                modalImage.src = imgSrc
+                modal.show()
+              })
+            })
+          })</script>
+</body>
+
+</html>
