@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Success Stories</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS for animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS for buttons and cards -->
+    <style>
+    
+    html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+}
+
+.hero-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?success');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure it occupies full viewport height */
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width */
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-header .container {
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Ensure the container uses full width */
+}
+
+.hero-header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-header p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("https://placeholder.svg?height=400&width=800") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.intro-section {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Full width */
+}
+
+.btn-orange {
+    background-color: #ff6b35;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #ff8c5a;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.pulse-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+    }
+}
+
+.display-2 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+/* Fixing container width and margins */
+.container, .container-fluid {
+    width: 100%;
+    padding: 0; /* Remove container's default padding */
+}
+
+.testimonials-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 1rem auto 0;
+}
+
+.card-custom {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.card-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-img-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+
+.testimonial-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.card-custom {
+  border: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-custom:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-custom .card-body {
+  padding: 1.5rem;
+}
+
+.card-custom .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-custom .card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.read-more {
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.card-custom {
+  border: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-custom:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
+}
+
+.read-more {
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+}
+
+.awards-section {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+}
+
+.section-header {
+  color: #007bff;
+  font-weight: bold;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 15px auto 0;
+}
+
+.award-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.award-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.award-card h3 {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.award-card p {
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .awards-section {
+    padding: 2rem;
+  }
+}
+
+.future-prospects {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.future-prospects::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.future-prospects::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff7f50;
+  margin: 15px auto 0;
+}
+
+.opportunity-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.opportunity-card .card-body {
+  padding: 30px;
+  background: linear-gradient(45deg, #ff7f50, #ff6b6b);
+  color: white;
+}
+
+.opportunity-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-orange {
+  background-color: #ff7f50;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-orange:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+.btn-orange::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s;
+}
+
+.btn-orange:hover::before {
+  left: 100%;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<main class="main container">
+
+    <header class="hero-header d-flex align-items-center justify-content-center text-white">
+        <div class="container text-center">
+            <h1 class="display-2 fw-bold mb-3" data-aos="fade-down" data-aos-duration="1000">Success Stories</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Inspiring journeys of <span id="typing"></span></p>
+            <a href="#" class="btn btn-outline-light btn-lg" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">Explore Stories</a>
+        </div>
+    </header>
+    <!-- Introduction Section -->
+    <div class="container-fluid hero-section">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-md-8 offset-md-2 text-center">
+                <section data-aos="fade-up" data-aos-duration="1000" class="intro-section">
+                    <h1 class="display-2 mb-4 text-white">Hackathon Breakthroughs</h1>
+                    <p class="lead mb-5 text-white">Discover how participating in our hackathons has helped teams achieve breakthroughs, create innovative solutions, and launch their startup ideas into reality. The competitive yet supportive environment allows participants to push their limits and build something incredible in a short amount of time.</p>
+                    <a href="#get-started" class="btn btn-lg btn-orange pulse-btn" data-aos="zoom-in" data-aos-delay="300">Get Started</a>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Participant Testimonials Section -->
+   
+        <section class="testimonials-section py-5">
+            <div class="container">
+                <h2 class="section-header text-center mb-5" data-aos="fade-down">Participant Testimonials</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card card-custom h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="testimonial-img-wrapper mb-3">
+                                    <img src="https://random.imagecdn.app/500/150" class="card-img-top rounded-circle" alt="Participant Image">
+                                </div>
+                                <p class="testimonial flex-grow-1">"I had no idea that my idea could turn into a product in just 48 hours. The hackathon gave me the platform, resources, and mentorship I needed."</p>
+                                <p class="testimonial-name text-end">- Alex Johnson</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card card-custom h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="testimonial-img-wrapper mb-3">
+                                    <img src="https://random.imagecdn.app/500/150" class="card-img-top rounded-circle" alt="Participant Image">
+                                </div>
+                                <p class="testimonial flex-grow-1">"The hackathon experience was life-changing! The exposure to real-world challenges and the opportunity to work with brilliant minds was amazing."</p>
+                                <p class="testimonial-name text-end">- Sarah Lee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card card-custom h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="testimonial-img-wrapper mb-3">
+                                    <img src="https://random.imagecdn.app/500/150" class="card-img-top rounded-circle" alt="Participant Image">
+                                </div>
+                                <p class="testimonial flex-grow-1">"The mentorship and networking opportunities at the hackathon were invaluable. It opened so many doors for my career!"</p>
+                                <p class="testimonial-name text-end">- David Thompson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Winning Teams Section -->
+    <div class="container-fluid py-5 bg-gradient">
+        <section data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="section-header text-center mb-5">Winning Teams</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card card-custom h-100 shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">Team Innovators</h5>
+                        </div>
+                        <img src="https://random.imagecdn.app/500/150" class="card-img-top" alt="Team Image">
+                        <div class="card-body">
+                            <p class="card-text">This team came up with a groundbreaking AI solution that impressed the judges and took home the first prize. Their unique approach to solving data analytics problems was unparalleled.</p>
+                            <div class="mt-3">
+                                <p><strong>The Challenge:</strong> To create a real-time data processing system.</p>
+                                <p><strong>Outcome:</strong> They went on to raise seed funding for their startup.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <button class="btn btn-outline-primary btn-sm read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 mb-4" data-aos="flip-right" data-aos-delay="400">
+                    <div class="card card-custom h-100 shadow-lg">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="card-title mb-0">Team CodeMasters</h5>
+                        </div>
+                        <img src="https://random.imagecdn.app/500/150" class="card-img-top" alt="Team Image">
+                        <div class="card-body">
+                            <p class="card-text">This team built a scalable cloud-based application to improve healthcare data management. Their solution caught the attention of investors and healthcare professionals alike.</p>
+                            <div class="mt-3">
+                                <p><strong>The Challenge:</strong> To design a scalable app for managing patient data.</p>
+                                <p><strong>Outcome:</strong> The team secured a partnership with a leading healthcare provider.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <button class="btn btn-outline-success btn-sm read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Awards & Recognition Section -->
+    <div class="container py-5">
+        <section id="awards" class="awards-section" data-aos="fade-up">
+            <h2 class="section-header text-center mb-5">Awards & Recognition</h2>
+            <p class="text-center mb-5">Our hackathons are known for rewarding innovation and excellence. Some of the most notable awards include:</p>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="award-card">
+                        <div class="award-icon">🏆</div>
+                        <h3>Best Innovation Award</h3>
+                        <p>Awarded to the team with the most unique and impactful solution.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="award-card">
+                        <div class="award-icon">💻</div>
+                        <h3>Best Tech Solution</h3>
+                        <p>Recognizes the most technically challenging and well-executed product.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="award-card">
+                        <div class="award-icon">👥</div>
+                        <h3>Audience Choice Award</h3>
+                        <p>Voted by the attendees for the most popular team or idea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Future Prospects and Opportunities Section -->
+    <section class="future-prospects py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2 class="section-header text-center mb-4">Future Prospects and Opportunities</h2>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <p class="lead text-center mb-4">Many of our hackathon winners have gone on to achieve incredible success, including securing venture capital funding, forming partnerships with industry leaders, and even launching their own startups.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card opportunity-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Venture Capital</h5>
+                            <p class="card-text">Secure funding from top-tier investors to turn your ideas into reality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card opportunity-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Industry Partnerships</h5>
+                            <p class="card-text">Collaborate with leading companies to scale your innovations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="600">
+                    <div class="card opportunity-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Startup Launch</h5>
+                            <p class="card-text">Transform your hackathon project into a successful startup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#join-now" class="btn btn-orange btn-lg" data-aos="zoom-in" data-aos-delay="800">Join the Next Hackathon</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Bootstrap JS and AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+
+    const words = ['determination', 'perseverance', 'innovation', 'growth'];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    const typingElement = document.getElementById('typing');
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newWordDelay = 2000;
+
+    function type() {
+        if (letterIndex < words[wordIndex].length) {
+            typingElement.textContent += words[wordIndex].charAt(letterIndex);
+            letterIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            setTimeout(erase, newWordDelay);
+        }
+    }
+
+    function erase() {
+        if (letterIndex > 0) {
+            typingElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
+            letterIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(type, typingDelay);
+        }
+    }
+
+    type();
+});</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Smooth scroll for the "Get Started" button
+    document.querySelector('a[href="#get-started"]').addEventListener("click", function (e) {
+      e.preventDefault()
+      const targetId = this.getAttribute("href")
+      const targetElement = document.querySelector(targetId)
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        })
+      }
+    })
+  })</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Add hover effect to cards
+    const cards = document.querySelectorAll(".card-custom")
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+      })
+      card.addEventListener("mouseleave", () => {
+        card.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+      })
+    })
+  })</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Add event listeners to "Read More" buttons
+    const readMoreButtons = document.querySelectorAll(".read-more")
+    readMoreButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const card = this.closest(".card-custom")
+        const cardBody = card.querySelector(".card-body")
+        const cardText = cardBody.querySelector(".card-text")
+  
+        if (cardText.style.maxHeight) {
+          cardText.style.maxHeight = null
+          this.textContent = "Read More"
+        } else {
+          cardText.style.maxHeight = cardText.scrollHeight + "px"
+          this.textContent = "Read Less"
+        }
+      })
+    })
+  
+    // Add hover effect to cards
+    const cards = document.querySelectorAll(".card-custom")
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", function () {
+        this.style.transform = "translateY(-10px) scale(1.03)"
+      })
+      card.addEventListener("mouseleave", function () {
+        this.style.transform = "translateY(0) scale(1)"
+      })
+    })
+  })
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Add hover effect to cards
+    const cards = document.querySelectorAll(".card-custom")
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-15px) scale(1.03)"
+      })
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0) scale(1)"
+      })
+    })
+  
+    // Add click event to "Read More" buttons
+    const readMoreButtons = document.querySelectorAll(".read-more")
+    readMoreButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault()
+        const card = button.closest(".card-custom")
+        const cardBody = card.querySelector(".card-body")
+        const cardText = cardBody.querySelector(".card-text")
+  
+        if (cardText.style.maxHeight) {
+          cardText.style.maxHeight = null
+          button.textContent = "Read More"
+        } else {
+          cardText.style.maxHeight = cardText.scrollHeight + "px"
+          button.textContent = "Read Less"
+        }
+      })
+    })
+  
+    // Add parallax effect to background
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.pageYOffset
+      document.body.style.backgroundPositionY = scrollPosition * 0.5 + "px"
+    })
+  })</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Add animation to award icons
+    const awardIcons = document.querySelectorAll(".award-icon")
+    awardIcons.forEach((icon) => {
+      icon.addEventListener("mouseover", () => {
+        icon.style.transform = "scale(1.2) rotate(10deg)"
+      })
+      icon.addEventListener("mouseout", () => {
+        icon.style.transform = "scale(1) rotate(0deg)"
+      })
+    })
+  })
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  
+    // Custom animation for opportunity cards
+    const cards = document.querySelectorAll(".opportunity-card")
+    cards.forEach((card, index) => {
+      card.addEventListener("mouseover", () => {
+        card.style.transform = `translateY(-10px) rotate(${(index % 2 === 0 ? 1 : -1) * 2}deg)`
+      })
+      card.addEventListener("mouseout", () => {
+        card.style.transform = "translateY(0) rotate(0)"
+      })
+    })
+  
+    // Parallax effect for background circles
+    window.addEventListener("mousemove", (e) => {
+      const circles = document.querySelectorAll(".future-prospects::before, .future-prospects::after")
+      const mouseX = e.clientX / window.innerWidth
+      const mouseY = e.clientY / window.innerHeight
+  
+      circles.forEach((circle, index) => {
+        const speed = index === 0 ? 20 : 30
+        const x = mouseX * speed - speed / 2
+        const y = mouseY * speed - speed / 2
+        circle.style.transform = `translate(${x}px, ${y}px)`
+      })
+    })
+  })</script>
+</body>
+</html>
