@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team Members | Hackathon Highlights</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+
+    body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .superpower {
+      background-color: #f9f9f9;
+      border-left: 4px solid orange;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+
+.hero-section {
+            height: 60vh;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+}
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 80%);
+  transform: rotate(30deg);
+  z-index: -1;
+}
+
+h1 {
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lead {
+  color: #34495e;
+}
+
+.btn-orange {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+}
+
+.custom-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.icon-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box i {
+  font-size: 2rem;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.icon-box h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+
+    .team-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+}
+
+.team-section h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  font-style: italic;
+}
+
+.superpower {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+    .roles-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.roles-section h2 {
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.role-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.role-card .card-title {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.role-card .card-subtitle {
+  font-weight: 600;
+}
+
+.skill-tags {
+  margin-top: 15px;
+}
+
+.skill-tags .badge {
+  margin-right: 5px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+    .team-dynamics {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.glow-text {
+  color: #007bff;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.motto {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.pulse-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: -10px;
+  will-change: transform;
+}
+
+    .quirky-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.quirky-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quirky-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.quirky-card:hover {
+  transform: translateY(-5px);
+}
+
+.quirky-card .card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.badge {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+#quoteBtn {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+#quoteBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#quoteDisplay {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    margin-top: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+  </style>
+</head>
+<body>
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero-section py-5 text-center d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-3 fw-bold mb-4" data-aos="fade-down" data-aos-delay="100">Meet the Innovators</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Discover the passionate minds driving our hackathon projects forward.</p>
+                    <button class="btn btn-orange btn-lg mt-3 custom-btn" data-aos="zoom-in" data-aos-delay="300">Get to Know Us</button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="400">
+                    <div class="icon-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovative Ideas</h3>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaborative Teams</h3>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="600">
+                    <div class="icon-box">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Cutting-edge Tech</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Profiles -->
+    <section class="py-5 team-section">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold" data-aos="fade-down">Meet Our Superheroes</h2>
+            <div class="row g-4">
+                <!-- Team Member 1 -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="card text-center team-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Amit Sharma" class="card-img-top">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-light btn-sm me-2">LinkedIn</a>
+                                    <a href="#" class="btn btn-light btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Amit Sharma</h5>
+                            <p class="text-muted">Full Stack Developer</p>
+                            <p>Expert in building scalable web applications and fixing bugs over coffee.</p>
+                            <div class="superpower">Superpower: Debugs faster than the speed of light!</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card text-center team-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Priya Gupta" class="card-img-top">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-light btn-sm me-2">LinkedIn</a>
+                                    <a href="#" class="btn btn-light btn-sm">Dribbble</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Priya Gupta</h5>
+                            <p class="text-muted">UI/UX Designer</p>
+                            <p>Designs intuitive user interfaces and brings creativity to every project.</p>
+                            <div class="superpower">Superpower: Turns wireframes into pure magic!</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card text-center team-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Bharat Agrawal" class="card-img-top">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#" class="btn btn-light btn-sm me-2">LinkedIn</a>
+                                    <a href="#" class="btn btn-light btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bharat Agrawal</h5>
+                            <p class="text-muted">Backend Developer</p>
+                            <p>Masters the art of APIs, database designs, and server-side logic.</p>
+                            <div class="superpower">Superpower: Can connect any two systems in minutes!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Roles and Responsibilities -->
+    <section class="roles-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-down">Our Team's Expertise</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card role-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bharat Agrawal</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Backend Developer</h6>
+                            <p class="card-text">Developed databases, APIs, and server configurations.</p>
+                            <div class="skill-tags">
+                                <span class="badge bg-primary">Node.js</span>
+                                <span class="badge bg-success">MongoDB</span>
+                                <span class="badge bg-info">RESTful APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card role-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Priya Gupta</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">UI/UX Designer</h6>
+                            <p class="card-text">Created user-friendly designs and prototypes.</p>
+                            <div class="skill-tags">
+                                <span class="badge bg-warning">Figma</span>
+                                <span class="badge bg-danger">Adobe XD</span>
+                                <span class="badge bg-secondary">Sketch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card role-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amit Sharma</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
+                            <p class="card-text">Handled end-to-end web application development.</p>
+                            <div class="skill-tags">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-success">Node.js</span>
+                                <span class="badge bg-info">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Team Dynamics and Core Values -->
+     <section class="py-5 team-dynamics">
+        <div class="container">
+            <h2 class="text-center mb-5 glow-text" data-aos="fade-down">Team Dynamics & Core Values</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Our Approach</h3>
+                            <p class="card-text">Our team thrives on collaboration, creativity, and a shared passion for innovation. We believe in pushing boundaries and challenging the status quo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Core Values</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Integrity</li>
+                                <li class="list-group-item">Innovation</li>
+                                <li class="list-group-item">Collaboration</li>
+                                <li class="list-group-item">Excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <blockquote class="blockquote">
+                    <p class="mb-0 motto">"Code. Create. Conquer."</p>
+                    <footer class="blockquote-footer">Our Team Motto</footer>
+                </blockquote>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg pulse-button" id="teamSpiritBtn">Boost Team Spirit!</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Fun and Quirky Additions -->
+    <section class="py-5 quirky-section">
+        <div class="container">
+            <h2 class="text-center mb-5 quirky-title" data-aos="fade-down">Fun Facts & Quirky Additions</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="flip-left">
+                    <div class="card h-100 quirky-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Favorite Tech</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">React <span class="badge bg-primary">❤️</span></li>
+                                <li class="list-group-item">Node.js <span class="badge bg-success">🚀</span></li>
+                                <li class="list-group-item">Figma <span class="badge bg-info">🎨</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="card h-100 quirky-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Team Hobbies</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Gaming <span class="badge bg-danger">🎮</span></li>
+                                <li class="list-group-item">Sketching <span class="badge bg-warning">✏️</span></li>
+                                <li class="list-group-item">Meme-Making <span class="badge bg-secondary">😂</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-right" data-aos-delay="200">
+                    <div class="card h-100 quirky-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Office Quirks</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nerf Gun Battles <span class="badge bg-danger">🔫</span></li>
+                                <li class="list-group-item">Rubber Duck Debugging <span class="badge bg-warning">🦆</span></li>
+                                <li class="list-group-item">Pizza Fridays <span class="badge bg-success">🍕</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="quoteBtn" data-aos="zoom-in">Get Inspirational Quote</button>
+            </div>
+            <div id="quoteDisplay" class="mt-4 text-center" data-aos="fade-up"></div>
+        </div>
+    </section>
+
+  </main>
+
+
+
+<!-- Hero Section -->
+  <script>
+        // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Parallax effect for the background
+document.addEventListener("mousemove", (e) => {
+  const moveX = (e.clientX - window.innerWidth / 2) * 0.01
+  const moveY = (e.clientY - window.innerHeight / 2) * 0.01
+  document.querySelector(".hero-section").style.backgroundPosition = `${moveX}px ${moveY}px`
+})
+
+// Typing effect for the heading
+const heading = document.querySelector("h1")
+const text = heading.textContent
+heading.textContent = ""
+let i = 0
+
+function typeWriter() {
+  if (i < text.length) {
+    heading.textContent += text.charAt(i)
+    i++
+    setTimeout(typeWriter, 100)
+  }
+}
+
+// Start typing effect after a short delay
+setTimeout(typeWriter, 1000)
+
+// Add a click event to the button
+document.querySelector(".custom-btn").addEventListener("click", function (e) {
+  e.preventDefault()
+  this.classList.add("clicked")
+  setTimeout(() => {
+    this.classList.remove("clicked")
+  }, 1000)
+})
+  </script>
+
+
+<!-- Team Profiles -->
+<script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Animate superpower text
+document.addEventListener("DOMContentLoaded", () => {
+  const superpowers = document.querySelectorAll(".superpower")
+
+  superpowers.forEach((power) => {
+    power.addEventListener("mouseover", function () {
+      this.style.transform = "scale(1.1)"
+      this.style.color = "#007bff"
+      this.style.transition = "all 0.3s ease-in-out"
+    })
+
+    power.addEventListener("mouseout", function () {
+      this.style.transform = "scale(1)"
+      this.style.color = "#6c757d"
+    })
+  })
+})
+</script>
+
+
+<!-- Roles and Responsibilities -->
+  <script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Add hover effect to role cards
+document.querySelectorAll(".role-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.backgroundColor = "#f8f9fa"
+  })
+  card.addEventListener("mouseleave", () => {
+    card.style.backgroundColor = "#fff"
+  })
+})
+
+// Add a simple scroll-to-top button
+const scrollBtn = document.createElement("button")
+scrollBtn.innerHTML = "↑"
+scrollBtn.setAttribute("id", "scroll-to-top")
+scrollBtn.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+`
+
+document.body.appendChild(scrollBtn)
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    scrollBtn.style.display = "block"
+  } else {
+    scrollBtn.style.display = "none"
+  }
+})
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" })
+})
+  </script>
+
+
+
+  <!-- Team Dynamics and Core Values -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    // Team Spirit Button
+    document.getElementById("teamSpiritBtn").addEventListener("click", function () {
+        createConfetti();
+        this.textContent = "Team Spirit Boosted!";
+        setTimeout(() => {
+            this.textContent = "Boost Team Spirit!";
+        }, 3000);
+    });
+
+    // Confetti Animation
+    function createConfetti() {
+        const confettiColors = ["#007bff", "#28a745", "#dc3545", "#ffc107", "#17a2b8"];
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            confetti.style.left = Math.random() * window.innerWidth + "px";
+            confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+            confetti.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+
+            document.body.appendChild(confetti);
+
+            anime({
+                targets: confetti,
+                top: window.innerHeight,
+                duration: Math.random() * 2000 + 1000,
+                easing: "easeOutCirc",
+                complete: (anim) => {
+                    confetti.remove();
+                },
+            });
+        }
+    }
+});
+
+</script>
+
+
+
+  <!-- Fun and Quirky Additions -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    // Inspirational quotes
+    const quotes = [
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+        "Strive not to be a success, but rather to be of value. - Albert Einstein",
+        "The best way to predict the future is to invent it. - Alan Kay",
+    ];
+
+    // Handle quote button click
+    document.getElementById("quoteBtn").addEventListener("click", () => {
+        const quoteDisplay = document.getElementById("quoteDisplay");
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteDisplay.textContent = randomQuote;
+
+        // Trigger AOS animation for the quote
+        quoteDisplay.setAttribute("data-aos", "fade-up");
+        AOS.refresh();
+    });
+});
+
+</script>
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

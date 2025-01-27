@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - Hackathon Heroes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            height: 60vh;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-orange {
+            background-color: #ff9f43;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 159, 67, 0.4);
+        }
+        .btn-orange:hover {
+            background-color: #ffa857;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 159, 67, 0.6);
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+  
+    .card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 40px 0 20px;
+      font-weight: bold;
+    }
+
+    .origin-story {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #fff;
+  border: 4px solid #3498db;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left:-2%;
+}
+
+.right {
+  left: 2%;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  margin: 15px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content .date {
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  background-color: #3498db;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.timeline-content h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 991px) {
+  .timeline::before {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-item::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  .right {
+    left: 0%;
+  }
+}
+
+
+    .team-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+  height: 200px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.card-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+.team-btn {
+  background-color: #764ba2;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.team-btn:hover {
+  background-color: #667eea;
+}
+
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-header {
+  background-color: #764ba2;
+  color: #ffffff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+
+    
+.featured-projects {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.project-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+.card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.btn-outline-primary {
+  border-width: 2px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+
+    .behind-scenes {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: #fff;
+  padding: 80px 0;
+}
+
+
+
+.card {
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #2193b0;
+  border-color: #2193b0;
+}
+
+.btn-primary:hover {
+  background-color: #1c7a94;
+  border-color: #1c7a94;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: #333;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: bold;
+  color: #2193b0;
+}
+
+    
+.challenges-section {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.bug-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bug-card:hover {
+  transform: translateY(-5px);
+}
+
+.bug-card .card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.bug-card .card-text {
+  font-size: 1.1rem;
+}
+
+.bug-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#bugButton {
+  background-color: #28a745;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#bugButton:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+#randomBug {
+  font-size: 1.2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+    .awards-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+}
+
+.award-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 400px;
+}
+
+.award-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.award-card:hover .award-card-inner {
+  transform: rotateY(180deg);
+}
+
+.award-card-front,
+.award-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.award-card-front {
+  background-color: #ffffff;
+}
+
+.award-card-back {
+  background-color: #4a4a4a;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.award-card-front img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.award-card-front .card-body {
+  padding: 20px;
+}
+
+.award-card-front .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.award-card-back h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.award-card-back p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .award-card {
+    height: 350px;
+  }
+}
+
+    .testimonials {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 80px 0;
+}
+
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-content {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(106, 17, 203, 0.1);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border: 3px solid #6a11cb;
+}
+
+.testimonial-author h5 {
+  margin: 0;
+  color: #6a11cb;
+  font-weight: bold;
+}
+
+.testimonial-author small {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+
+    .team-moodboard {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-content {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.list-group-item {
+  border: none;
+  padding: 1rem 0;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.bg-orange {
+  background-color: #ffa500;
+}
+
+.emoji-container {
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.emoji-container {
+  animation: pulse 2s infinite;
+}
+
+
+    .hackathon-stats {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-text {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 30px;
+  }
+}
+
+    .future-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.future-card:hover {
+  transform: translateY(-10px);
+}
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+  border-radius: 5px;
+}
+
+#ideaBtn {
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#ideaBtn:hover {
+  background-color: #ffffff;
+  color: #764ba2;
+  transform: scale(1.05);
+}
+    .timeline {
+      margin-top: 20px;
+    }
+    .timeline img {
+      border-radius: 50%;
+    }
+    .project-gallery .card img {
+      height: 150px;
+      object-fit: cover;
+    }
+    .project-gallery .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <header class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up" class="mb-4">Meet the Innovators Behind the Code!</h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="mb-5">From crazy ideas to award-winning projects, we're a team fueled by innovation, coffee, and sleepless nights.</p>
+            <button class="btn btn-orange" data-aos="fade-up" data-aos-delay="200">
+                Explore Our Projects
+                <i class="fas fa-rocket ms-2"></i>
+            </button>
+            <div class="mt-5" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-code fa-3x text-white floating"></i>
+            </div>
+        </div>
+    </header>
+
+  <main class="main">
+     <!-- Origin Story -->
+     <section class="origin-story py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">How It All Started!</h2>
+            <div class="timeline">
+                <div class="row g-0">
+                    <div class="col-lg-6 timeline-item left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <div class="date">Day 1</div>
+                            <h3>The Accidental Spark</h3>
+                            <p>It all began when a group of friends accidentally spilled coffee on a laptop at a hackathon. Little did we know, this mishap would lead to something extraordinary.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 timeline-item right" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <div class="date">Day 2</div>
+                            <h3>From Chaos to Creation</h3>
+                            <p>Fueled by caffeine and determination, we turned our accident into inspiration. We started brainstorming innovative solutions to prevent such incidents in the future.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 timeline-item left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <div class="date">Week 1</div>
+                            <h3>The First Prototype</h3>
+                            <p>Within a week, we had our first prototype: a spill-proof laptop cover. It wasn't perfect, but it was a start. We knew we were onto something big.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 timeline-item right" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <div class="date">Month 1</div>
+                            <h3>Beyond Laptops</h3>
+                            <p>As we refined our initial idea, we realized our potential to solve other tech-related problems. We expanded our focus to create innovative solutions for various digital challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <img src="https://random.imagecdn.app/800/400" alt="Our Journey" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </section>
+
+
+<!-- Team Superpowers -->
+<section class="team-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-down">Our Hackathon Super Squad!</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000">
+                <div class="card team-card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Bharat Agrawal">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Bharat Agrawal</h5>
+                        <p class="card-text flex-grow-1">Debugging Wizard - Can fix bugs faster than coffee can kick in!</p>
+                        <button class="btn btn-primary mt-3 team-btn" data-bs-toggle="modal" data-bs-target="#bharatModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card team-card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Riya Mehta">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Riya Mehta</h5>
+                        <p class="card-text flex-grow-1">UI/UX Guru - Designs interfaces users actually love!</p>
+                        <button class="btn btn-primary mt-3 team-btn" data-bs-toggle="modal" data-bs-target="#riyaModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card team-card h-100">
+                    <div class="card-image-wrapper">
+                        <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Kunal Jain">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Kunal Jain</h5>
+                        <p class="card-text flex-grow-1">Tech Stack Magician - Knows 10 programming languages!</p>
+                        <button class="btn btn-primary mt-3 team-btn" data-bs-toggle="modal" data-bs-target="#kunalModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="bharatModal" tabindex="-1" aria-labelledby="bharatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bharatModalLabel">Bharat Agrawal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bharat is our go-to person for all things debugging. With his lightning-fast problem-solving skills, he can squash bugs before they even know what hit them!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="riyaModal" tabindex="-1" aria-labelledby="riyaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="riyaModalLabel">Riya Mehta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Riya has an eye for design that's second to none. Her interfaces are so intuitive, users think they've gained telepathic abilities!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="kunalModal" tabindex="-1" aria-labelledby="kunalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kunalModalLabel">Kunal Jain</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Kunal is our polyglot programmer extraordinaire. He switches between programming languages faster than most people switch TV channels!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">Our Greatest Hits!</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="card project-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="AI Health Tracker" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">AI-Powered Health Tracker</h5>
+                            <p class="card-text">Using AI to revolutionize health tracking and analysis.</p>
+                            <a href="#" class="btn btn-outline-primary mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card project-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Smart Transport Planner" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Transport Planner</h5>
+                            <p class="card-text">Redefining commutes with intelligent route optimization.</p>
+                            <a href="#" class="btn btn-outline-primary mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card project-card h-100">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Hackathon Hub" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hackathon Hub</h5>
+                            <p class="card-text">An all-in-one platform for hackathon participants.</p>
+                            <a href="#" class="btn btn-outline-primary mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+ <!-- Behind the Scenes -->
+ <section class="behind-scenes py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-down">The Chaos Chronicles!</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card h-100 shadow-lg">
+                    <img src="https://random.imagecdn.app/500/300" alt="Behind the Scenes" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Late Night Coding</h5>
+                        <p class="card-text">That moment when the code finally worked at 3 AM!</p>
+                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modal1">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="card h-100 shadow-lg">
+                    <img src="https://random.imagecdn.app/500/300" alt="Team Celebration" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Completion Party</h5>
+                        <p class="card-text">Celebration time after finishing our project—nothing beats that feeling!</p>
+                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modal2">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal1Label">Late Night Coding</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>It was a long night of debugging and coffee, but when that code finally ran without errors, the feeling was indescribable! The office might have been empty, but our spirits were soaring high.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Project Completion Party</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>After weeks of hard work, late nights, and countless pizza boxes, we finally completed the project. The celebration that followed was epic – filled with laughter, high-fives, and a sense of accomplishment that words can't describe.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+      <!-- Crazy Challenges & Fun Bugs -->
+      <section class="challenges-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">We Broke It to Fix It!</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="card bug-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Bug Story 1</h3>
+                            <p class="card-text">Our chatbot started talking in emojis—unintentionally! 😂</p>
+                            <div class="bug-icon">🤖</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="card bug-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Bug Story 2</h3>
+                            <p class="card-text">We had a "404 Not Found" issue with our database... for 3 hours! 😅</p>
+                            <div class="bug-icon">💾</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="zoom-in">
+                <button class="btn btn-primary btn-lg" id="bugButton">Generate Random Bug</button>
+            </div>
+            <div id="randomBug" class="mt-4 text-center" style="display: none;" data-aos="flip-up"></div>
+        </div>
+    </section>
+
+
+   <!-- Awards and Achievements -->
+   <section class="awards-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-down">The Hackathon Hall of Fame!</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000">
+                <div class="award-card">
+                    <div class="award-card-inner">
+                        <div class="award-card-front">
+                            <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Award Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Best Innovation Award</h5>
+                            </div>
+                        </div>
+                        <div class="award-card-back">
+                            <h5>TechSprint 2024</h5>
+                            <p>Recognized for groundbreaking innovation in AI-driven solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="award-card">
+                    <div class="award-card-inner">
+                        <div class="award-card-front">
+                            <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Award Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Audience Choice Award</h5>
+                            </div>
+                        </div>
+                        <div class="award-card-back">
+                            <h5>EyTechHackathrone</h5>
+                            <p>Voted as the most impactful project by the audience and industry experts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                <div class="award-card">
+                    <div class="award-card-inner">
+                        <div class="award-card-front">
+                            <img src="https://random.imagecdn.app/500/300" class="card-img-top" alt="Award Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 5 Finalist</h5>
+                            </div>
+                        </div>
+                        <div class="award-card-back">
+                            <h5>CodeCrush 2024</h5>
+                            <p>Recognized among the top 5 projects for technical excellence and creativity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+      <!-- Testimonials -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">What They Say About Us!</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-right">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Their innovation and creativity have redefined the way we think about hackathons!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.svg?height=60&width=60" alt="Author" class="rounded-circle">
+                            <div>
+                                <h5>John Doe</h5>
+                                <small>Hackathon Judge, TechSprint</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"A truly dynamic team that knows how to balance fun and serious coding."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.svg?height=60&width=60" alt="Author" class="rounded-circle">
+                            <div>
+                                <h5>Jane Smith</h5>
+                                <small>Mentor, EyTechHackathrone</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-left">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"An exceptional experience that pushes the boundaries of what's possible in a hackathon."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.svg?height=60&width=60" alt="Author" class="rounded-circle">
+                            <div>
+                                <h5>Mike Johnson</h5>
+                                <small>Participant, CodeCraft Challenge</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+      <!-- Team Moodboard -->
+      <section class="team-moodboard py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">Our Hackathon Vibes!</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="image-container">
+                        <img src="https://random.imagecdn.app/500/300" alt="Moodboard" class="img-fluid rounded shadow-lg">
+                        <div class="overlay">
+                            <div class="overlay-content">Hover for a surprise!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card bg-light shadow-lg">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Team Inspirations</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent" data-aos="fade-up" data-aos-delay="100">
+                                    <strong>Favorite Quote:</strong>
+                                    <p class="mt-2 fst-italic">"Code is like humor. When you have to explain it, it's bad." – Cory House</p>
+                                </li>
+                                <li class="list-group-item bg-transparent" data-aos="fade-up" data-aos-delay="200">
+                                    <strong>Colors:</strong>
+                                    <div class="d-flex mt-2">
+                                        <span class="color-box bg-dark"></span>
+                                        <span class="color-box bg-light border"></span>
+                                        <span class="color-box bg-orange"></span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item bg-transparent" data-aos="fade-up" data-aos-delay="300">
+                                    <strong>Emojis:</strong>
+                                    <p class="mt-2 emoji-container">🤖☕💡🔥</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+      <!-- Dynamic Stats -->
+      <section class="hackathon-stats py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">Hackathon Madness!</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="stat-card" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="stat-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-target="5">0</h3>
+                            <p class="stat-text">Hackathons Attended</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="stat-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-target="1000">0</h3>
+                            <p class="stat-text">Lines of Code Written</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="stat-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number" data-target="200">0</h3>
+                            <p class="stat-text">Cups of Coffee Consumed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+       <!-- Future Lab -->
+      <section id="future-lab" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-down">What's Next for Us?</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="card future-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Coming Soon</h3>
+                            <p class="card-text">An AR-Based Travel Planner!</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="card future-card">
+                        <div class="card-body">
+                            <h3 class="card-title">In Progress</h3>
+                            <p class="card-text">A Voice-Controlled Task Manager for Hackers.</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button id="ideaBtn" class="btn btn-primary btn-lg" data-aos="zoom-in">Got an Idea?</button>
+            </div>
+        </div>
+    </section>
+  </main>
+
+
+  <script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+            modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+    });
+
+    document.querySelector('.btn-orange').addEventListener('mouseover', function() {
+        this.innerHTML = 'Let\'s Innovate! <i class="fas fa-lightbulb ms-2"></i>';
+    });
+
+    document.querySelector('.btn-orange').addEventListener('mouseout', function() {
+        this.innerHTML = 'Explore Our Projects <i class="fas fa-rocket ms-2"></i>';
+    });
+</script>
+
+
+
+   <!-- Origin Story -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+    mirror: false,
+  })
+
+  // Custom scroll effect for timeline items
+  const timelineItems = document.querySelectorAll(".timeline-item")
+
+  function checkScroll() {
+    timelineItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top
+      const itemBottom = item.getBoundingClientRect().bottom
+      const isVisible = itemTop < window.innerHeight - 100 && itemBottom > 0
+
+      if (isVisible) {
+        item.classList.add("animate")
+      }
+    })
+  }
+
+  window.addEventListener("scroll", checkScroll)
+  checkScroll() // Check on load
+})
+
+
+  </script>
+
+
+
+<!-- Team Superpowers -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Custom animation for team cards
+  const teamCards = document.querySelectorAll(".team-card")
+  teamCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-10px) rotate(2deg)"
+    })
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0) rotate(0)"
+    })
+  })
+})
+
+
+</script>
+
+
+
+
+ <!-- Featured Projects -->
+  <script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Add hover effect to project cards
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "translateY(-10px) scale(1.03)"
+    card.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.2)"
+  })
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "translateY(0) scale(1)"
+    card.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 0.1)"
+  })
+})
+
+// Add parallax effect to section background
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.pageYOffset
+  document.querySelector(".featured-projects").style.backgroundPositionY = scrollPosition * 0.5 + "px"
+})
+
+// Add click event to "Learn More" buttons
+document.querySelectorAll(".btn-outline-primary").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    const projectTitle = e.target.closest(".card-body").querySelector(".card-title").textContent
+    alert(
+      `You clicked "Learn More" for ${projectTitle}. This is where you'd add more details or link to a project page.`,
+    )
+  })
+})
+
+
+  </script>
+
+
+   <!-- Behind the Scenes -->
+  <script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Custom animation for section title
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionTitle = document.querySelector(".section-title")
+  sectionTitle.style.opacity = "0"
+  sectionTitle.style.transform = "translateY(-50px)"
+
+  setTimeout(() => {
+    sectionTitle.style.transition = "opacity 1s ease-out, transform 1s ease-out"
+    sectionTitle.style.opacity = "1"
+    sectionTitle.style.transform = "translateY(0)"
+  }, 500)
+})
+
+// Add parallax effect to cards
+window.addEventListener("scroll", () => {
+  const cards = document.querySelectorAll(".card")
+  cards.forEach((card) => {
+    const scrollPosition = window.pageYOffset
+    const cardPosition = card.offsetTop
+    const windowHeight = window.innerHeight
+    if (scrollPosition + windowHeight > cardPosition) {
+      const distance = (scrollPosition + windowHeight - cardPosition) * 0.1
+      card.style.transform = `translateY(-${distance}px)`
+    }
+  })
+})
+
+
+  </script>
+
+
+ <!-- Crazy Challenges & Fun Bugs -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Random bug generator
+  const bugButton = document.getElementById("bugButton")
+  const randomBug = document.getElementById("randomBug")
+  const bugs = [
+    "The login button logged everyone out instead of in!",
+    "Our AI started recommending ice cream flavors for every search query.",
+    "The 'Delete' button accidentally duplicated items.",
+    "Our app's dark mode turned everything neon pink.",
+    "The password strength meter called every password 'unbreakable'.",
+  ]
+
+  bugButton.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * bugs.length)
+    randomBug.textContent = bugs[randomIndex]
+    randomBug.style.display = "block"
+
+    // Reset and trigger AOS animation
+    randomBug.setAttribute("data-aos", "flip-up")
+    AOS.refreshHard()
+  })
+
+  // Add hover effect to bug cards
+  const bugCards = document.querySelectorAll(".bug-card")
+  bugCards.forEach((card) => {
+    card.addEventListener("mouseenter", function () {
+      this.style.backgroundColor = "#f8f9fa"
+    })
+    card.addEventListener("mouseleave", function () {
+      this.style.backgroundColor = "#ffffff"
+    })
+  })
+})
+
+
+</script>
+
+
+   <!-- Awards and Achievements -->
+<script>
+    // Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+})
+
+// Add hover effect to award cards
+document.querySelectorAll(".award-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.05)"
+    card.style.transition = "transform 0.3s ease-in-out"
+  })
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)"
+  })
+})
+
+// Add a simple parallax effect to the section title
+window.addEventListener("scroll", () => {
+  const title = document.querySelector(".section-title")
+  const scrollPosition = window.scrollY
+  title.style.transform = `translateY(${scrollPosition * 0.2}px)`
+})
+
+// Add a confetti effect when clicking on an award card
+document.querySelectorAll(".award-card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    createConfetti(e.clientX, e.clientY)
+  })
+})
+
+function createConfetti(x, y) {
+  const confettiCount = 50
+  const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"]
+
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement("div")
+    confetti.className = "confetti"
+    confetti.style.left = `${x}px`
+    confetti.style.top = `${y}px`
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+    confetti.style.transform = `rotate(${Math.random() * 360}deg)`
+    document.body.appendChild(confetti)
+
+    anime({
+      targets: confetti,
+      left: `${x + (Math.random() - 0.5) * 200}px`,
+      top: `${y + Math.random() * 200}px`,
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      complete: (anim) => {
+        document.body.removeChild(confetti)
+      },
+    })
+  }
+}
+
+// Add this CSS to your styles.css file for the confetti effect
+const style = document.createElement("style")
+style.textContent = `
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+        z-index: 9999;
+    }
+`
+document.head.appendChild(style)
+
+
+</script>
+
+
+
+   <!-- Testimonials -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Add hover effect to testimonial cards
+  const testimonialCards = document.querySelectorAll(".testimonial-card")
+  testimonialCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.backgroundColor = "rgba(255, 255, 255, 1)"
+    })
+    card.addEventListener("mouseleave", () => {
+      card.style.backgroundColor = "rgba(255, 255, 255, 0.9)"
+    })
+  })
+})
+
+
+</script>
+
+
+  <!-- Team Moodboard -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Add hover effect to emojis
+  const emojis = document.querySelector(".emoji-container")
+  emojis.addEventListener("mouseover", function () {
+    this.style.transform = "scale(1.2)"
+  })
+  emojis.addEventListener("mouseout", function () {
+    this.style.transform = "scale(1)"
+  })
+
+  // Add click event to color boxes
+  const colorBoxes = document.querySelectorAll(".color-box")
+  colorBoxes.forEach((box) => {
+    box.addEventListener("click", function () {
+      const color = window.getComputedStyle(this).backgroundColor
+      document.body.style.backgroundColor = color
+      setTimeout(() => {
+        document.body.style.backgroundColor = ""
+      }, 500)
+    })
+  })
+
+  // Add typewriter effect to the quote
+  const quote = document.querySelector(".fst-italic")
+  const text = quote.textContent
+  quote.textContent = ""
+  let i = 0
+  function typeWriter() {
+    if (i < text.length) {
+      quote.textContent += text.charAt(i)
+      i++
+      setTimeout(typeWriter, 50)
+    }
+  }
+  typeWriter()
+})
+  </script>
+  
+  <!-- Dynamic Stats -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Animate numbers
+  const counters = document.querySelectorAll(".stat-number")
+  const speed = 200
+
+  counters.forEach((counter) => {
+    const animate = () => {
+      const value = +counter.getAttribute("data-target")
+      const data = +counter.innerText
+
+      const time = value / speed
+      if (data < value) {
+        counter.innerText = Math.ceil(data + time)
+        setTimeout(animate, 1)
+      } else {
+        counter.innerText = value + "+"
+      }
+    }
+
+    animate()
+  })
+})
+  </script>
+
+
+ <!-- Future Lab -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+  })
+
+  // Add interactivity to the "Got an Idea?" button
+  const ideaBtn = document.getElementById("ideaBtn")
+  ideaBtn.addEventListener("click", () => {
+    const idea = prompt("What's your innovative idea for our Future Lab?")
+    if (idea) {
+      alert("Thanks for sharing your idea: " + idea + "\nWe'll consider it for our future projects!")
+
+      // Create a new card for the user's idea
+      const newCard = document.createElement("div")
+      newCard.className = "col-lg-6 mb-4"
+      newCard.setAttribute("data-aos", "fade-up")
+      newCard.innerHTML = `
+                <div class="card future-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Your Idea</h3>
+                        <p class="card-text">${idea}</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            `
+
+      // Add the new card to the row
+      document.querySelector(".row").appendChild(newCard)
+
+      // Reinitialize AOS for the new element
+      AOS.refresh()
+
+      // Animate the progress bar
+      setTimeout(() => {
+        const progressBar = newCard.querySelector(".progress-bar")
+        progressBar.style.width = "30%"
+      }, 100)
+    }
+  })
+})
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

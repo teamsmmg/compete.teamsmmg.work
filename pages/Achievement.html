@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Team Achievements</title>
+  
+  <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/Mystyle.css">
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- vi ai -->
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .snack-hall {
+        background: linear-gradient(135deg, #f7f7f7 0%, #e0e0e0 100%);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .snack-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .snack-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .snack-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .counter {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+    .oops-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .oops-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .oops-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .oops-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .oops-title {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .card-text {
+        font-style: italic;
+        font-size: 1.1rem;
+    }
+    .leaderboard-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 0;
+        color: #fff;
+    }
+    .leaderboard-title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 50px;
+    }
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .card-header {
+        background-color: #4a69bd;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 20px;
+        border-bottom: 5px solid #1e3799;
+    }
+    .card-body {
+        padding: 30px;
+        background-color: #fff;
+    }
+    .winner-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    .achievement {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+    }
+    .trophy-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #f1c40f;
+    }
+
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    h2 {
+        color: #333;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .card h5 {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    .tech-badge {
+        background-color: #3498db;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+    .superpower-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 0;
+        color: #fff;
+    }
+    .superpower-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    .superpower-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .superpower-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #fff;
+    }
+    .skill-card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+    }
+    .skill-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        color: #333;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+        .skill-card {
+            margin-bottom: 20px;
+        }
+    }
+
+    .gallery-section {
+            background: linear-gradient(135deg, #f7f7f7 0%, #e0e0e0 100%);
+            padding: 80px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-title {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .gallery-container {
+            perspective: 1000px;
+        }
+        .gallery-item {
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .gallery-item:hover {
+            transform: rotateY(10deg) scale(1.05);
+        }
+        .gallery-image {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .image-caption {
+            opacity: 1;
+        }
+
+    .testimonial-section {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        padding: 80px 0;
+        color: white;
+    }
+    .testimonial-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .quote-icon {
+        font-size: 2rem;
+        opacity: 0.5;
+    }
+    .testimonial-text {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+    .testimonial-author {
+        font-weight: bold;
+        text-align: right;
+    }
+    .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #ffffff, transparent);
+    }
+
+    .process-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+    .process-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .process-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #007bff;
+    }
+
+    .project-card {
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 15px 15px 30px #d1d1d1, -15px -15px 30px #ffffff;
+    }
+    .project-title {
+        color: #007bff;
+        font-weight: bold;
+    }
+    .project-tech {
+        color: #6c757d;
+        font-style: italic;
+    }
+    .project-impact {
+        color: #28a745;
+    }
+    .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 3px;
+        background: linear-gradient(to right, #007bff, #28a745);
+    }
+
+    .timeline-section {
+        position: relative;
+        padding: 60px 0;
+    }
+    .timeline-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background: #3498db;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .timeline-item:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 30px;
+    }
+    .timeline-item:nth-child(odd) {
+        margin-right: 50%;
+        padding-right: 30px;
+        text-align: right;
+    }
+    .timeline-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    .timeline-content::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background: #3498db;
+        border-radius: 50%;
+    }
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -40px;
+    }
+    .timeline-item:nth-child(odd) .timeline-content::before {
+        right: -40px;
+    }
+    .timeline-year {
+        position: absolute;
+        top: 0;
+        background: #3498db;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .timeline-item:nth-child(even) .timeline-year {
+        left: -85px;
+    }
+    .timeline-item:nth-child(odd) .timeline-year {
+        right: -85px;
+    }
+
+    .awards-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 0;
+        color: #fff;
+    }
+    .section-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    .award-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .award-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .award-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .award-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .award-description {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+      }
+      
+      .hero-section {
+        background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      
+      .text-gradient {
+        background: linear-gradient(45deg, #e65c00, #f9d423);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+      
+      .btn-primary {
+        background-color: #e65c00;
+        border-color: #e65c00;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        background-color: #f9d423;
+        border-color: #f9d423;
+        color: #1a1a1a;
+      }
+      
+      .btn-outline-light:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      
+      img:hover {
+        transform: scale(1.05);
+      }
+      
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      
+      .container {
+        z-index: 2;
+      }
+      
+      
+
+    body {
+        background-color: #f0f2f5;
+      }
+      
+      .media-mentions {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 80px 0;
+      }
+      
+      .media-mentions h2 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 50px;
+        position: relative;
+      }
+      
+      .media-mentions h2::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 3px;
+        background: #3498db;
+        margin: 20px auto 0;
+      }
+      
+      .mention-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .mention-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      
+      .mention-card .card-body {
+        padding: 30px;
+      }
+      
+      .mention-card .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background-color: #3498db;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .mention-card .icon-wrapper i {
+        font-size: 24px;
+        color: white;
+      }
+      
+      .mention-card .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      
+      .mention-card .card-text {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      
+      .mention-card .btn-outline-primary {
+        border-color: #3498db;
+        color: #3498db;
+        transition: all 0.3s ease;
+      }
+      
+      .mention-card .btn-outline-primary:hover {
+        background-color: #3498db;
+        color: white;
+      }
+      
+      @media (max-width: 768px) {
+        .media-mentions {
+          padding: 60px 0;
+        }
+      
+        .media-mentions h2 {
+          font-size: 2rem;
+        }
+      }
+      
+      
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .btn-orange {
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-orange:hover {
+      background-color: #e65c00;
+    }
+
+    .card {
+      background-color: #f7f7f7;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #ff6600;
+      border-radius: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 10px;
+      width: 2px;
+      height: calc(100% - 10px);
+      background-color: #ff6600;
+    }
+    .stats-section {
+        padding: 100px 0;
+    }
+    .stats-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .stats-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    .stats-number {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .stats-text {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .skill-card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+    }
+    .skill-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        color: #333;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+        .skill-card {
+            margin-bottom: 20px;
+        }
+    }
+  </style>
+</head>
+<body>
+   <!-- Hero Section -->
+   <section class="hero-section text-center py-5 position-relative overflow-hidden">
+    <div id="particles-js" class="position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container position-relative">
+        <h1 class="display-3 fw-bold mb-4" data-aos="fade-down" data-aos-duration="1000">
+            Our Journey of <span class="text-gradient">Innovation</span> & <span class="text-gradient">Success!</span>
+        </h1>
+        <p class="lead mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            10+ Hackathons, 5 Grand Wins, and Unstoppable Energy!
+        </p>
+        <img src="https://random.imagecdn.app/800/400" alt="Team Photo" class="img-fluid rounded-3 shadow-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+        <div class="mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <a href="#" class="btn btn-primary btn-lg me-3 rounded-pill">Our Projects</a>
+            <a href="#" class="btn btn-outline-light btn-lg rounded-pill">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<section class="awards-section">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Awards & Achievements</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                <div class="award-card p-4 text-center">
+                    <div class="award-icon">🏆</div>
+                    <h5 class="award-title">1st Place</h5>
+                    <p class="award-description">Google Hackathon 2024</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="award-card p-4 text-center">
+                    <div class="award-icon">🥈</div>
+                    <h5 class="award-title">Runner-Up</h5>
+                    <p class="award-description">Microsoft Azure Challenge 2023</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="400">
+                <div class="award-card p-4 text-center">
+                    <div class="award-icon">💡</div>
+                    <h5 class="award-title">Innovation Award</h5>
+                    <p class="award-description">AI & ML Sprint 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="timeline-section">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Milestones Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="timeline-year">2024</span>
+                    <h4>1st Place at Google Hackathon</h4>
+                    <p>Developed an innovative AI-powered solution that impressed judges and secured the top position.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-content">
+                    <span class="timeline-year">2023</span>
+                    <h4>Runner-Up at Microsoft Azure Challenge</h4>
+                    <p>Created a scalable cloud application that showcased advanced Azure capabilities.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <span class="timeline-year">2022</span>
+                    <h4>Innovation Award at AI & ML Sprint</h4>
+                    <p>Developed a groundbreaking machine learning model that solved a complex industry problem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- Projects & Innovations -->
+  <section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title" data-aos="fade-up">Projects & Innovations</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card p-4">
+                    <h5 class="project-title mb-3">AI Pizza Toppings</h5>
+                    <p class="project-tech mb-2"><i class="fas fa-code"></i> Python, TensorFlow</p>
+                    <p class="project-impact mb-0"><i class="fas fa-chart-line"></i> Personalized pizza topping recommendations for users.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card p-4">
+                    <h5 class="project-title mb-3">Blockchain for Cats</h5>
+                    <p class="project-tech mb-2"><i class="fas fa-code"></i> Ethereum, Solidity</p>
+                    <p class="project-impact mb-0"><i class="fas fa-chart-line"></i> Created a secure system for tracking cat ownership.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Media Mentions & Press -->
+<section class="py-5 media-mentions">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Media Mentions & Press</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card mention-card">
+                    <div class="card-body">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h5 class="card-title">Featured in TechCrunch</h5>
+                        <p class="card-text">Acknowledged as one of the most innovative hackathon teams in 2024.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card mention-card">
+                    <div class="card-body">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5 class="card-title">Mentioned by Forbes</h5>
+                        <p class="card-text">Praised for creating impactful blockchain solutions.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card mention-card">
+                    <div class="card-body">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h5 class="card-title">Featured on CNN Tech</h5>
+                        <p class="card-text">Highlighted for groundbreaking AI applications in healthcare.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Work Process -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title" data-aos="fade-up">Our Innovative Work Process</h2>
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card process-card p-4 text-center bg-primary text-white">
+                    <div class="process-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h5>Ideation</h5>
+                    <p>Brainstorm innovative ideas during sleepless hackathon nights.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card process-card p-4 text-center bg-success text-white">
+                    <div class="process-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h5>Creation</h5>
+                    <p>Collaborate, code, and create prototypes in record time.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card process-card p-4 text-center bg-warning">
+                    <div class="process-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h5>Refinement</h5>
+                    <p>Test and refine until our projects are demo-ready.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card process-card p-4 text-center bg-danger text-white">
+                    <div class="process-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h5>Presentation</h5>
+                    <p>Deliver impactful presentations that wow the judges!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Enhanced Team Testimonials -->
+<section class="testimonial-section">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title" data-aos="fade-up">Voices of Innovation</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="testimonial-card p-4">
+                    <div class="quote-icon mb-3">"</div>
+                    <p class="testimonial-text">Building together taught us more than just coding—it taught us the art of synergy, where our collective skills created something truly extraordinary.</p>
+                    <p class="testimonial-author mt-3">- Jane Doe, Backend Virtuoso</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="testimonial-card p-4">
+                    <div class="quote-icon mb-3">"</div>
+                    <p class="testimonial-text">Each hackathon is a journey where we push boundaries, challenge our limits, and emerge stronger as innovators and as a unified team.</p>
+                    <p class="testimonial-author mt-3">- John Smith, Frontend Maestro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <section class="stats-section">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-down">Hackathon Achievements</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stats-card text-center">
+                    <div class="stats-number" id="hackathonsAttended">0</div>
+                    <p class="stats-text">Hackathons Conquered</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stats-card text-center">
+                    <div class="stats-number" id="winsRunnerUps">0</div>
+                    <p class="stats-text">Victories & Podium Finishes</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stats-card text-center">
+                    <div class="stats-number" id="projectsSubmitted">0</div>
+                    <p class="stats-text">Innovative Projects Launched</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+
+</section>
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Skills & Expertise</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                <div class="skill-card p-4 text-center h-100">
+                    <i class="skill-icon fas fa-brain text-primary"></i>
+                    <h5 class="mb-3">AI/ML</h5>
+                    <p>Expertise in TensorFlow and advanced machine learning models for cutting-edge solutions.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                <div class="skill-card p-4 text-center h-100">
+                    <i class="skill-icon fas fa-link text-success"></i>
+                    <h5 class="mb-3">Blockchain</h5>
+                    <p>Proficiency in Solidity and Ethereum development, creating secure and efficient smart contracts.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                <div class="skill-card p-4 text-center h-100">
+                    <i class="skill-icon fas fa-code text-info"></i>
+                    <h5 class="mb-3">Web Development</h5>
+                    <p>Mastery in HTML, CSS, JS, and React, building responsive and dynamic web applications.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                <div class="skill-card p-4 text-center h-100">
+                    <i class="skill-icon fas fa-cloud text-warning"></i>
+                    <h5 class="mb-3">Cloud Computing</h5>
+                    <p>Skilled in AWS and Google Cloud services, optimizing scalable and reliable cloud infrastructures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  
+<section class="superpower-section">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Our Hackathon Superpowers</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+                <div class="superpower-card p-4 text-center">
+                    <div class="superpower-icon">🌙</div>
+                    <h5>All-Nighter Champions</h5>
+                    <p>We code better at 3 AM than most people during the day!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+                <div class="superpower-card p-4 text-center">
+                    <div class="superpower-icon">🐞</div>
+                    <h5>Bug Tamers</h5>
+                    <p>Squashed 200+ bugs in a single hackathon!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+                <div class="superpower-card p-4 text-center">
+                    <div class="superpower-icon">☕</div>
+                    <h5>Caffeine Enthusiasts</h5>
+                    <p>400 cups of coffee consumed = countless innovations!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="400">
+                <div class="superpower-card p-4 text-center">
+                    <div class="superpower-icon">💡</div>
+                    <h5>Idea Generators</h5>
+                    <p>Brainstormed 1000+ ideas, each crazier than the last!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">Projects That Blew Everyone's Minds</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card p-4">
+                    <h5 class="mb-3">AI-Powered Pizza Topping Recommender</h5>
+                    <p>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                    </p>
+                    <p class="mb-0">Personalized pizza toppings based on your mood and taste. Our AI analyzes your preferences and suggests the perfect combination for your next pizza adventure!</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card p-4">
+                    <h5 class="mb-3">Blockchain for Cats</h5>
+                    <p>
+                        <span class="tech-badge">Ethereum</span>
+                        <span class="tech-badge">Solidity</span>
+                    </p>
+                    <p class="mb-0">A secure blockchain system for tracking cat ownership. Ensure your feline friend's identity is protected and their lineage is recorded for generations to come!</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">Explore More Projects</button>
+        </div>
+    </div>
+</section>
+  
+<section class="leaderboard-section">
+    <div class="container">
+        <h2 class="text-center leaderboard-title" data-aos="fade-down">Leaderboard of Awesomeness</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <div class="trophy-icon">🏆</div>
+                        <h5>Fastest Coder</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="winner-name">Jane Doe</p>
+                        <p class="achievement">300 lines of code in 2 hours!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <div class="trophy-icon">🐞</div>
+                        <h5>Best Bug Squasher</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="winner-name">John Smith</p>
+                        <p class="achievement">Squashed 50 bugs during the final hour!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <div class="trophy-icon">😂</div>
+                        <h5>Meme Maker of the Year</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="winner-name">Emma Watson</p>
+                        <p class="achievement">Created 20 hilarious memes during a break!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<section class="oops-section py-5 my-5">
+    <div class="container">
+        <h2 class="text-center mb-5 oops-title" data-aos="zoom-in">Oops, We Did That!</h2>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="card oops-card p-4">
+                    <div class="oops-icon">💥</div>
+                    <h5 class="card-title">Project Crash</h5>
+                    <p class="card-text">
+                        "That one project that crashed during the live demo (oops!). But hey, it taught us the importance of backups and grace under pressure!"
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="card oops-card p-4">
+                    <div class="oops-icon">🎉</div>
+                    <h5 class="card-title">Feature Nobody Needed</h5>
+                    <p class="card-text">
+                        "We accidentally created a feature nobody needed but everyone loved! Sometimes, the best innovations come from unexpected places."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <!-- The Snack Hall of Fame -->
+<section class="py-5 snack-hall">
+    <div class="container">
+        <h2 class="text-center mb-5 display-4 fw-bold" data-aos="fade-up">The Snack Hall of Fame</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card snack-card p-4">
+                    <div class="snack-icon">🌪️</div>
+                    <h5 class="fw-bold">Doritos</h5>
+                    <p class="mb-2">Bags devoured</p>
+                    <div class="counter" data-target="50">0</div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card snack-card p-4">
+                    <div class="snack-icon">⚡</div>
+                    <h5 class="fw-bold">Energy Drinks</h5>
+                    <p class="mb-2">Cans consumed</p>
+                    <div class="counter" data-target="100">0</div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card snack-card p-4">
+                    <div class="snack-icon">🍫</div>
+                    <h5 class="fw-bold">Chocolate Bars</h5>
+                    <p class="mb-2">Debugging fuel</p>
+                    <div class="counter" data-target="75">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <!-- The Meme Wall -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="fade-up">The Meme Wall</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="zoom-in">
+          <img src="https://random.imagecdn.app/500/150" alt="Meme 1" class="img-fluid rounded">
+          <p class="text-center mt-2">"When the code works on the first try!"</p>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in">
+          <img src="https://random.imagecdn.app/500/150" alt="Meme 2" class="img-fluid rounded">
+          <p class="text-center mt-2">"Deploying at 3 AM vibes."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Call-to-Action (CTA) -->
+  <section class="py-5 text-center" style="background-color: #161616; color:white">
+    <div class="container" >
+      <h2 data-aos="fade-up">Collaborate with Us!</h2>
+      <p class="mb-4" data-aos="fade-up">Want to build something incredible with our team? Let's connect!</p>
+      <button class="btn-orange" data-aos="fade-up">Get in Touch</button>
+    </div>
+  </section>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+      mirror: false
+    });
+
+    // Add hover effect to cards
+    const cards = document.querySelectorAll(".mention-card");
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", function () {
+        this.style.transform = "translateY(-15px) scale(1.03)";
+      });
+      card.addEventListener("mouseleave", function () {
+        this.style.transform = "translateY(0) scale(1)";
+      });
+    });
+
+    // Particle.js configuration
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } },
+      },
+      retina_detect: true,
+    });
+
+    // Function to animate counting up
+    function animateValue(id, start, end, duration) {
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      let obj = document.getElementById(id);
+      let timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current;
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+
+    // Start animations when the page loads
+    animateValue("hackathonsAttended", 0, 15, 2000);
+    animateValue("winsRunnerUps", 0, 10, 2000);
+    animateValue("projectsSubmitted", 0, 20, 2000);
+
+    // Add a parallax effect to the gallery images
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      document.querySelectorAll('.gallery-image').forEach(image => {
+        const speed = 0.5; // Adjust for desired parallax effect
+        image.style.transform = `translateY(${scrollPosition * speed}px)`;
+      });
+    });
+  });
+</script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+</script>
+</body>
+</html>
