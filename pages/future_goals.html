@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Team - Future Goals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+   body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+    
+    .hero-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://source.unsplash.com/random/1600x900/?technology");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* width: 100vw; */
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent 20%, #000 70%);
+  opacity: 0.7;
+}
+
+.hero-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff6b35;
+  margin: 10px auto;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-orange {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e55a2b;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+.epic-fails-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 15px auto 0;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.5em 1em;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.hack-system {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #ff6b6b;
+  margin: 10px auto;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-orange {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-orange:hover {
+  background-color: #ff4757;
+  transform: scale(1.05);
+}
+  
+.mission-vision {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff6b6b;
+  margin: 15px auto 0;
+}
+
+.mission-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #333;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-orange {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ff4757;
+  transform: scale(1.05);
+}
+
+.img-fluid {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+.educational-resources {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card-img-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-glow {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow:hover::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+
+.future-madness {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #ff6b6b;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-card:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-orange {
+  background-color: #ff6b6b;
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ff4757;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+
+
+
+
+    
+    
+    /* previous css */
+    
+    
+    
+    /* .main-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff4500;
+      margin-bottom: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .btn-orange {
+      background-color: #ff4500;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-orange:hover {
+      background-color: #ff5733;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 15px;
+} */
+
+  </style>
+</head>
+<body>
+    
+    <main class="container main">
+      <header class="hero-header d-flex align-items-center justify-content-center text-white">
+          <div class="container text-center">
+              <h1 class="display-2 fw-bold mb-3" data-aos="fade-down" data-aos-duration="1000">Our Hackathon Team's Future Goals</h1>
+              <p class="lead mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Innovating for a brighter tomorrow</p>
+              <button class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" onclick="showMessage()">Learn More</button>
+          </div>
+      </header>
+    <!-- Section 1 -->
+    <section class="py-5 bg-light" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="zoom-in" data-aos-delay="200">Impossible Made Possible</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-lg" data-aos="flip-left" data-aos-delay="400">
+                        <div class="card-header p-0">
+                            <img src="https://random.imagecdn.app/500/150" alt="Project Image" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">In one of our hackathons, we managed to build a fully functional app in just 24 hours despite a power blackout. It was a mix of passion, creativity, and non-stop coffee!</p>
+                            <button class="btn btn-orange" id="readMoreBtn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="epic-fails-section py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="zoom-in">Epic Fails That Became Wins</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card custom-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="card-image-wrapper">
+                            <img src="https://random.imagecdn.app/500/300" alt="Project Image" class="card-img-top">
+                            <div class="card-img-overlay">
+                                <span class="badge bg-danger">Epic Fail</span>
+                                <span class="badge bg-success">Unexpected Win</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Our code broke mid-demo during a major presentation, but that glitch inspired us to create an entirely new debugging tool, now used by over 100 teams globally!</p>
+                            <button class="btn btn-primary btn-lg btn-block mt-3" id="discoverBtn">Discover How</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hack-system py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="zoom-in" data-aos-delay="200">Hack the System</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card custom-card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/150" alt="Project Image" class="card-img-top">
+                            <div class="card-img-overlay">
+                                <h3 class="card-title">AI-Driven Coffee Breaks</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">We built an AI-driven tool to optimize coffee breaks based on our productivity levels. Turns out, it boosted efficiency by 15% during our projects!</p>
+                            <button class="btn btn-orange" id="learnMoreBtn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+   
+    <!-- Mission & Vision -->
+    <section class="mission-vision py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="zoom-in" data-aos-delay="200">Mission & Vision</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="400">
+                    <div class="card mission-card">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Our Mission</h3>
+                            <p class="card-text">Our mission is to empower innovators worldwide and create a collaborative platform for solving real-world challenges. We aim to foster creativity, learning, and impactful projects.</p>
+                            <button class="btn btn-orange mt-3" data-bs-toggle="modal" data-bs-target="#missionModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="600">
+                    <img src="https://random.imagecdn.app/500/300" alt="Mission Image" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+  
+ 
+  
+ 
+  
+  
+  
+ 
+ 
+  <!-- Educational Resources -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Educational Resources</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+      <section class="educational-resources py-5" data-aos="fade-up">
+          <div class="container">
+              <h2 class="section-title text-center mb-5" data-aos="zoom-in">Educational Resources</h2>
+              <div class="row">
+                  <div class="col-md-6 mb-4" data-aos="flip-left" data-aos-delay="100">
+                      <div class="card h-100 shadow-lg">
+                          <div class="card-img-top-wrapper">
+                              <img src="https://random.imagecdn.app/500/300" alt="Tutorials" class="card-img-top">
+                              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                  <h3 class="text-white">Tutorials</h3>
+                              </div>
+                          </div>
+                          <div class="card-body">
+                              <p class="card-text">Dive into our comprehensive tutorials designed to enhance your skills for hackathons.</p>
+                              <button class="btn btn-primary btn-glow">Explore Tutorials</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-4" data-aos="flip-right" data-aos-delay="200">
+                      <div class="card h-100 shadow-lg">
+                          <div class="card-img-top-wrapper">
+                              <img src="https://random.imagecdn.app/501/300" alt="Webinars" class="card-img-top">
+                              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                  <h3 class="text-white">Webinars</h3>
+                              </div>
+                          </div>
+                          <div class="card-body">
+                              <p class="card-text">Join our interactive webinars led by industry experts to gain valuable insights.</p>
+                              <button class="btn btn-primary btn-glow">Join Webinars</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                  <button class="btn btn-lg btn-primary btn-glow">Discover More Resources</button>
+              </div>
+          </div>
+      </section>
+  
+  
+  
+  
+ 
+      <section class="future-madness py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Future Madness</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card custom-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://random.imagecdn.app/500/150" alt="Future Image" class="card-img-top">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h3 class="overlay-text" data-aos="zoom-in" data-aos-delay="300">Embrace the Future</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text" data-aos="fade-up" data-aos-delay="400">We're exploring crazy but possible ideas, like using AI to judge hackathon pitches or even write them. The possibilities are endless, and the excitement is real!</p>
+                            <button class="btn btn-orange btn-lg mt-3" data-aos="flip-up" data-aos-delay="500">See Our Vision</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    AOS.init()
+  })
+  
+  function showMessage() {
+    alert("Exciting things are coming! Stay tuned for our innovative projects.")
+  }
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Custom button animation
+    const button = document.querySelector(".btn-orange")
+    button.addEventListener("mouseover", function () {
+      this.style.animation = "pulse 0.5s infinite"
+    })
+    button.addEventListener("mouseout", function () {
+      this.style.animation = "none"
+    })
+  })
+  
+  // Custom pulse animation
+  const style = document.createElement("style")
+  style.textContent = `
+      @keyframes pulse {
+          0% {
+              transform: scale(1);
+          }
+          50% {
+              transform: scale(1.05);
+          }
+          100% {
+              transform: scale(1);
+          }
+      }
+  `
+  document.head.appendChild(style)</script>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    // Initialize AOS
+    AOS.init()
+  
+    // Get the read more button
+    const readMoreBtn = document.getElementById("readMoreBtn")
+  
+    // Add click event listener to the button
+    readMoreBtn.addEventListener("click", () => {
+      // Create a modal with Bootstrap
+      const modal = new bootstrap.Modal(document.createElement("div"))
+      modal.element.innerHTML = `
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">The Full Story</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>During our last hackathon, we faced an unexpected challenge: a city-wide power outage. But that didn't stop us! Armed with laptops, portable chargers, and an unbreakable spirit, we set up camp in a nearby café.</p>
+                          <p>For 24 grueling hours, fueled by endless cups of coffee and pure determination, we coded, debugged, and innovated. The result? A groundbreaking app that not only met the hackathon's requirements but exceeded everyone's expectations.</p>
+                          <p>This experience taught us that with passion, teamwork, and a bit of improvisation, nothing is truly impossible. It's a testament to human ingenuity and the power of technology to overcome any obstacle.</p>
+                      </div>
+                  </div>
+              </div>
+          `
+      modal.show()
+    })
+  
+    // Add a scroll animation to the card
+    window.addEventListener("scroll", () => {
+      const card = document.querySelector(".card")
+      const cardPosition = card.getBoundingClientRect().top
+      const screenPosition = window.innerHeight / 1.3
+  
+      if (cardPosition < screenPosition) {
+        card.style.animation = "cardFloat 3s ease-in-out infinite"
+      }
+    })
+  })
+  
+  // Add the card float animation to the stylesheet
+  const style = document.createElement("style")
+  style.textContent = `
+      @keyframes cardFloat {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+      }
+  `
+  document.head.appendChild(style)</script>
+  <script>// Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    
+    // Add interactive element
+    document.getElementById("discoverBtn").addEventListener("click", function () {
+      const card = this.closest(".custom-card");
+      if (!card) return; // Ensure card exists
+      
+      // Rotate the card
+      card.style.transform = "rotateY(180deg)";
+      card.style.transition = "transform 0.6s ease";
+    
+      // Change content after the rotation
+      setTimeout(() => {
+        card.innerHTML = `
+          <div class="card-body" style="transform: rotateY(180deg);">
+            <h3 class="mb-4">The Unexpected Journey</h3>
+            <p>When our code failed during the demo, we thought all was lost. But in that moment of crisis, we realized the need for a more robust debugging tool. We spent the next 48 hours coding non-stop, fueled by coffee and determination.</p>
+            <p>The result? A powerful debugging suite that not only saved our project but also became a game-changer for developers worldwide. Sometimes, the biggest failures lead to the most incredible innovations!</p>
+            <button class="btn btn-secondary mt-3" onclick="location.reload()">Back to Card</button>
+          </div>
+        `;
+      }, 600); // Match with the rotation duration
+    });
+    
+    </script>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        // Initialize AOS
+        AOS.init({
+          duration: 1000,
+          once: true,
+        })
+      
+        // Smooth scroll for buttons
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault()
+      
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            })
+          })
+        })
+      
+        // Add hover effect to cards
+        const cards = document.querySelectorAll(".card")
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            card.style.transform = "translateY(-10px) scale(1.05)"
+          })
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "translateY(0) scale(1)"
+          })
+        })
+      })</script>
+    <script>// Initialize AOS
+        AOS.init({
+          duration: 1000,
+          once: true,
+        })
+        
+        // Add interactive element
+        document.getElementById("discoverBtn").addEventListener("click", function () {
+          const card = this.closest(".custom-card")
+          card.style.transform = "rotateY(180deg)"
+          card.style.transition = "transform 0.6s"
+        
+          setTimeout(() => {
+            card.innerHTML = `
+                    <div class="card-body" style="transform: rotateY(180deg);">
+                        <h3 class="mb-4">The Unexpected Journey</h3>
+                        <p>When our code failed during the demo, we thought all was lost. But in that moment of crisis, we realized the need for a more robust debugging tool. We spent the next 48 hours coding non-stop, fueled by coffee and determination.</p>
+                        <p>The result? A powerful debugging suite that not only saved our project but also became a game-changer for developers worldwide. Sometimes, the biggest failures lead to the most incredible innovations!</p>
+                        <button class="btn btn-secondary mt-3" onclick="location.reload()">Back to Card</button>
+                    </div>
+                `
+          }, 300)
+        })
+        </script>
+        <script>// Initialize AOS
+            AOS.init({
+              duration: 1000,
+              once: true,
+            })
+            
+            // Custom button animation
+            document.querySelector(".btn-orange").addEventListener("mouseover", function () {
+              this.style.animation = "pulse 0.5s infinite"
+            })
+            
+            document.querySelector(".btn-orange").addEventListener("mouseout", function () {
+              this.style.animation = "none"
+            })
+            
+            // Add this CSS to your styles.css file for the pulse animation
+            // @keyframes pulse {
+            //     0% {
+            //         transform: scale(1);
+            //     }
+            //     50% {
+            //         transform: scale(1.05);
+            //     }
+            //     100% {
+            //         transform: scale(1);
+            //     }
+            // }
+            </script>
+</body>
+</html>
